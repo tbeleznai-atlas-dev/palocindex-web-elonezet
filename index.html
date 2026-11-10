@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#052841">
+<meta name="description" content="PalócIndex – Nógrád és Palócföld helyi hírei, praktikus tanácsai és közösségi információi. Interaktív helyi fejlesztési előnézet.">
+<title>PalócIndex.hu – Helyieknek. Helyiekről.</title>
+<link rel="icon" type="image/svg+xml" href="paloc-icon.svg">
+<link rel="stylesheet" href="styles.css">
+<script src="towns-data.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#tartalom">Ugrás a tartalomra</a>
+<header class="masthead">
+  <div class="brand-area"><a href="#kezdolap" class="brand" aria-label="PalócIndex főoldal"><span class="brand-mark"><span class="mountain">▲</span><span class="brand-curve">⌁</span></span><span>Palóc<strong>Index</strong><small>.hu</small></span></a><span class="brand-separator"></span><p>A Palócföld hírei, információi, közössége</p></div>
+  <div class="masthead-right"><span>Helyieknek. Helyiekről.<br><em>A Palócföldről.</em></span></div>
+</header>
+<nav class="topnav" aria-label="Főmenü">
+ <div class="nav-scroll">
+  <a class="nav-active" href="#kezdolap">⌂ <span>Kezdőlap</span></a>
+  <a href="#telepulesek">⌖ <span>Települések</span></a>
+  <a href="#hirek">▤ <span>Hírek</span></a>
+  <a href="#idojaras">☀ <span>Időjárás</span></a>
+  <a href="#kozlekedes">◉ <span>Traffipax</span></a>
+  <a href="#allasok">▣ <span>Állások</span></a>
+  <a href="#hirdetesek">◇ <span>Adok-veszek</span></a>
+  <a href="#szolgaltatok">⚒ <span>Szolgáltatók</span></a>
+  <a class="nav-garden" href="#kerteszkedes">🌱 <span>Kertészkedés</span></a>
+  <a class="nav-home" href="#praktikak">⌂ <span>Házi praktikák</span></a>
+  <a href="#esemenyek">▦ <span>Események</span></a>
+  <a href="#kozosseg">♧ <span>Közösség</span></a>
+ </div>
+</nav>
+<div class="preview-disclaimer" role="note">INTERAKTÍV HELYI ELŐNÉZET · A hírek, események és hirdetések minták, nem aktuális közlések. Nincs automatikus közzététel.</div>
+<main id="tartalom" class="layout">
+ <div class="main-column">
+  <section class="hero" id="kezdolap" aria-labelledby="hero-title">
+   <div class="hero-overlay"></div>
+   <div class="hero-content">
+    <div class="hero-kicker">NÓGRÁD · PALÓCFÖLD · HELYI KÖZÖSSÉGEK</div>
+    <h1 id="hero-title">Hírek, információk és hasznos tudnivalók <span>a Palócföldről</span></h1>
+    <p>131 település egy helyen</p>
+    <form id="globalSearch" class="hero-search" role="search">
+      <label class="sr-only" for="townSearch">Település vagy keresőkifejezés</label>
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input type="search" id="townSearch" placeholder="Válassz települést vagy keress a hírek között…" autocomplete="off">
+      <button type="submit">Keresés</button>
+    </form>
+    <div id="searchSuggestions" class="suggestions" hidden></div>
+   </div>
+  </section>
+  <section class="quick-strip" id="telepulesek" aria-label="Rovatok">
+    <button data-target="hirek"><span>▤</span>Hírek</button>
+    <button data-target="idojaras"><span>☀</span>Időjárás</button>
+    <button data-target="kozlekedes"><span>◉</span>Traffipax</button>
+    <button data-target="allasok"><span>▣</span>Állások</button>
+    <button data-target="hirdetesek"><span>◇</span>Adok-veszek</button>
+    <button data-target="szolgaltatok"><span>⚒</span>Szolgáltatók</button>
+    <button data-target="esemenyek"><span>▦</span>Események</button>
+    <button data-target="kerteszkedes" class="quick-garden"><span>🌱</span>Kertészkedés</button>
+    <button data-target="praktikak" class="quick-home"><span>⌂</span>Házi praktikák</button>
+    <button data-target="kozosseg"><span>♧</span>Közösség</button>
+    <button data-target="onkormanyzat"><span>▥</span>Önkormányzat</button>
+  </section>
+  <section class="content-main" aria-labelledby="news-title" id="hirek">
+    <div class="section-title"><h2 id="news-title">Friss hírek a térségből <small>bemutató tartalom</small></h2><button id="allStoriesBtn" class="plain-link">Összes hír <span>→</span></button></div>
+    <div id="selectionNote" class="selection-note" hidden></div>
+    <div class="editorial-grid">
+      <article class="feature-news">
+       <img src="assets-v5/farm.jpg" alt="Nógrádi tájkép – illusztráció">
+       <span class="story-label">MINTAHÍR · HELYI INFORMÁCIÓ</span>
+       <h3>Így jelennek majd meg a települési hírek</h3>
+       <p>Helyi bejelentések, közlekedési tudnivalók és ellenőrzött közlemények település szerint.</p>
+       <button type="button" class="read-story" data-article="hir-helyi">Részletek →</button>
+      </article>
+      <div class="short-news" aria-label="További hírek">
+       <article><img src="assets-v5/castle.jpg" alt="Palócföldi táj"><div><span class="mini-kicker">MINTA · ÖRÖKSÉG</span><h3>Fedezzük fel együtt a Palócföld értékeit</h3><button data-article="hir-orokseg">Elolvasom →</button></div></article>
+       <article><img src="assets-v5/festival.jpg" alt="Helyi közösségi esemény illusztrációja"><div><span class="mini-kicker">MINTA · KÖZÖSSÉG</span><h3>Helyi programok és közösségi kezdeményezések</h3><button data-article="hir-kozosseg">Elolvasom →</button></div></article>
+       <article><img src="assets-v5/hero.jpg" alt="Falusi panoráma"><div><span class="mini-kicker">MINTA · TELEPÜLÉSEK</span><h3>131 település – egy közös információs tér</h3><button data-article="hir-telepules">Elolvasom →</button></div></article>
+      </div>
+    </div>
+    <div class="tips-cards">
+     <article class="tip-card garden" id="kerteszkedes"><h3>🌱 Kertészkedés</h3><img src="assets-v5/garden.jpg" alt="Kert és növények – illusztráció"><ul><li>Hónapról hónapra teendők</li><li>Növényápolási tanácsok</li><li>Kártevők és védekezés</li><li>Vetési és ültetési naptár</li></ul><button type="button" data-article="kert-palanta">Kertészeti tippek →</button></article>
+     <article class="tip-card home" id="praktikak"><h3>⌂ Házi praktikák</h3><img src="assets-v5/home.jpg" alt="Otthon és háztartás – illusztráció"><ul><li>Otthoni tippek és trükkök</li><li>Természetes megoldások</li><li>Takarítás és karbantartás</li><li>Pénztárcabarát ötletek</li></ul><button type="button" data-article="haz-vizko">Praktikus tanácsok →</button></article>
+    </div>
+  </section>
+  <section class="directory" id="onkormanyzat"><div class="section-title"><h2>Települések és önkormányzatok</h2></div><p>Keress a 131 nógrádi település között. A lista a helyben tárolt adatállományt használja.</p><label class="sr-only" for="townSelect">Település választása</label><select id="townSelect"><option value="">Válassz települést…</option></select><div id="townResult" class="town-result" aria-live="polite">Válassz egy települést a részletekhez.</div></section>
+  <section class="below-grid">
+   <article id="allasok"><h2>▣ Helyi állások</h2><p>Munkaadói ajánlatok és álláshirdetések számára fenntartott felület.</p><span class="sample-label">Jelenleg nincs ellenőrzött állásajánlat</span></article>
+   <article id="szolgaltatok"><h2>⚒ Helyi szolgáltatók</h2><p>Vállalkozók, mesterek, szolgáltatások és céges bemutatkozások.</p><span class="sample-label">Vállalkozói adatlapok később</span></article>
+   <article id="kozosseg"><h2>♧ Közösség</h2><p>Falusi élet, közösségi kezdeményezések, kertészeti tapasztalatok és helyi kérdések.</p><span class="sample-label">Közösségi beküldés még nem aktív</span></article>
+  </section>
+ </div>
+ <aside class="sidebar" aria-label="Hasznos helyi információk">
+  <section class="widget weather" id="idojaras"><div class="weather-top"><span class="weather-symbol">☀</span><div><h2>Időjárás</h2><strong id="weatherPlace">Endrefalva</strong></div></div><p>Hiteles élő időjárási adatok bekötése előtt nincs hőmérséklet-kijelzés.</p><a href="https://www.met.hu/idojaras/elorejelzes/" target="_blank" rel="noopener noreferrer">HungaroMet előrejelzés ↗</a></section>
+  <section class="widget compact" id="kozlekedes"><div class="widget-icon">◉</div><div><h2>Traffipax és közlekedés</h2><p>Hivatalos közlekedésbiztonsági hírek</p><a href="https://www.police.hu/" target="_blank" rel="noopener noreferrer">Rendőrségi hírek ↗</a></div></section>
+  <section class="widget" id="hirdetesek"><h2>📣 Hirdetések</h2><div class="ad-tiles"><button type="button" data-target="allasok"><span>👷</span>Állások</button><button type="button" data-target="szolgaltatok"><span>🧰</span>Szolgáltatók</button><button type="button" data-target="hirdetesek"><span>🛋️</span>Adok-veszek</button></div><p class="sidebar-notice">Mintafelület · hirdetésfeladás még nem érhető el.</p></section>
+  <section class="widget events" id="esemenyek"><h2>▦ Események a térségben</h2><div class="event-row"><span>01</span><div><strong>Helyi vásárok és piacok</strong><p>Összegyűjtött események helye</p></div></div><div class="event-row"><span>02</span><div><strong>Közösségi programok</strong><p>Települési eseménynaptár</p></div></div><div class="event-row"><span>03</span><div><strong>Kulturális események</strong><p>Forrásellenőrzés után</p></div></div><small>Bemutató kategóriák, nem meghirdetett események.</small></section>
+  <section class="widget help"><h2>Van egy helyi történeted?</h2><p>Az olvasói beküldés a jövőbeni moderált felületen lesz elérhető.</p><span>Helyieknek. Helyiekről.</span></section>
+ </aside>
+</main>
+<footer class="footer"><div class="footer-mountains" aria-hidden="true"></div><div class="footer-inner"><strong>Palóc<span>Index</span>.hu</strong><span>Helyieknek. Helyiekről. A Palócföldről.</span><small>Helyi fejlesztési előnézet · Nem nyilvános hírközlés · 2026</small></div></footer>
+<div class="modal" id="articleModal" hidden><div class="modal-backdrop" data-close-modal></div><section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-header"><span>PALÓCINDEX · TUDÁSTÁR</span><button id="closeModal" type="button" aria-label="Bezárás">×</button></div><div id="modalBody"></div></section></div>
+</body>
+</html>
