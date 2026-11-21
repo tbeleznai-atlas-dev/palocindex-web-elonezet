@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Hivatalos állomásmérések</title>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#1d688e"/><stop offset="1" stop-color="#56b9bb"/></linearGradient></defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg)"/><circle cx="517" cy="67" r="100" fill="#fff" opacity=".08"/>
+  <path d="M85 290h470" stroke="#d9f1ee" stroke-width="12" stroke-linecap="round"/><rect x="273" y="63" width="94" height="209" rx="46" fill="#f7fcff"/>
+  <rect x="304" y="107" width="32" height="121" rx="16" fill="#e36f5c"/><circle cx="320" cy="238" r="33" fill="#e36f5c"/>
+  <path d="M390 103h35m-35 36h25m-25 36h35m-35 36h25" stroke="#f7fcff" stroke-width="10" stroke-linecap="round" opacity=".9"/>
+  <path d="M180 126c24-24 60-24 84 0m-84 43c24-24 60-24 84 0m-84 43c24-24 60-24 84 0" fill="none" stroke="#c8f1e7" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="456" cy="253" r="36" fill="#f7fcff"/><path d="M456 253v-20m0 20 17 11" stroke="#2d8297" stroke-width="7" stroke-linecap="round"/>
+</svg>

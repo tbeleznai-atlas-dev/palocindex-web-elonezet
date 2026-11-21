@@ -1,0 +1,68 @@
+name: Validate and publish PalócIndex preview
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: palocindex-pages
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Test Pages packaging
+        run: python -m unittest ops.publication.test_build_github_pages
+      - name: Validate the site artifact
+        run: >-
+          python ops/publication/build_github_pages.py
+          --source-dir pages-source
+          --output-dir tmp/pages-preflight
+          --base-path /palocindex-web-elonezet/
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Build the public static files
+        run: >-
+          python ops/publication/build_github_pages.py
+          --source-dir pages-source
+          --output-dir pages-artifact
+          --base-path /palocindex-web-elonezet/
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: pages-artifact
+      - name: Deploy Pages preview
+        id: deployment
+        uses: actions/deploy-pages@v4

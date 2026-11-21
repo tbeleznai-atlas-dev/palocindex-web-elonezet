@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" role="img" aria-labelledby="title">
+<title id="title">Hegylábi kisvárosi ünnep templomtoronnyal és vásári sátrakkal</title>
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b9ddea"/><stop offset="1" stop-color="#f6e5c1"/></linearGradient>
+<linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a6cf91"/><stop offset="1" stop-color="#5d9676"/></linearGradient>
+<linearGradient id="stage" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#71649b"/><stop offset="1" stop-color="#343e69"/></linearGradient>
+<linearGradient id="curtain" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efa07d"/><stop offset="1" stop-color="#b95567"/></linearGradient>
+<linearGradient id="awning" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5c776"/><stop offset="1" stop-color="#dc765f"/></linearGradient>
+<linearGradient id="hills" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7c9ba5"/><stop offset="1" stop-color="#88ae87"/></linearGradient>
+<linearGradient id="canopy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a85258"/><stop offset=".5" stop-color="#e08267"/><stop offset="1" stop-color="#f0bd77"/></linearGradient>
+</defs>
+<rect width="160" height="100" fill="url(#sky)"/>
+<path d="M7 38q9-10 18 0 8-7 16 0" fill="none" stroke="#fff9e8" stroke-width="3" stroke-linecap="round"/>
+<circle cx="144" cy="15" r="8" fill="#ffd46e"/><path d="M144 3v3m0 18v3m-12-12h3m18 0h3" stroke="#f1b65b" stroke-width="1.4"/>
+
+<g stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 59l31-29 19 20 29-35 29 35 18-20 34 30v41H0z" fill="url(#hills)"/><path d="M0 72q36-18 75 1t85-3v30H0z" fill="url(#ground)"/><path d="M4 84q27-14 54 0m36 0q31-14 63 0" fill="none" stroke="#e2e4ad" stroke-width="2"/>
+<path d="M64 47h26v32H64z" fill="#e9cf9a" stroke="#89725c"/><path d="M59 48l18-17 19 17" fill="#a96657"/><path d="M72 30V12h10v18" fill="#e2cd9a" stroke="#8d765c"/><path d="M70 12l7-8 7 8" fill="#94685d"/><circle cx="77" cy="22" r="4" fill="#cbebe6"/><path d="M70 57h7v8h-7zm11 0h7v8h-7zm-5 13h8v9h-8z" fill="#8eaeb0"/>
+<path d="M15 67l13-11 14 11v17H15z" fill="#d28c66"/><path d="M11 67l17-15 18 15" fill="#8d695c"/><path d="M22 73h8v11h-8z" fill="#f3e1b5"/>
+<path d="M106 67h38v15h-38z" fill="#b66e4d"/><path d="M102 67l7-13h31l7 13" fill="#e9826d"/><path d="M108 67v15m9-15v15m9-15v15m9-15v15" stroke="#f8d48d" stroke-width="2"/><path d="M112 54h23" stroke="#745c7b" stroke-width="2"/>
+<circle cx="97" cy="68" r="3.5" fill="#c27c62"/><path d="M93 72h8v10h-8z" fill="#668ea3"/><circle cx="52" cy="72" r="3.5" fill="#d09a73"/><path d="M48 76h8v8h-8z" fill="#e0b85e"/><path d="M12 87h137" stroke="#827655" stroke-width="2"/><circle cx="137" cy="17" r="8" fill="#ffd36e"/><path d="M126 27q5-7 10 0m-54-4q6-8 12 0" fill="none" stroke="#fff5d7" stroke-width="2"/>
+</g>
+<g aria-hidden="true" opacity=".95" stroke-linecap="round" stroke-linejoin="round"><path d="M10 96v-9m0 5-4-4m4 2 4-4M149 96v-9m0 5-4-4m4 2 4-4M80 96v-7m0 4-3-3m3 2 3-3" fill="none" stroke="#41795b" stroke-width="1.6"/><circle cx="10" cy="85" r="2.4" fill="#ffd46e" stroke="#fff1c4"/><circle cx="149" cy="85" r="2.4" fill="#e78572" stroke="#ffe6bf"/><circle cx="80" cy="87" r="2" fill="#f0c266" stroke="#fff1c4"/><circle cx="5" cy="97" r="1.1" fill="#f4d27a"/><circle cx="25" cy="97" r="1.1" fill="#f4d27a"/><circle cx="135" cy="97" r="1.1" fill="#f4d27a"/><circle cx="155" cy="97" r="1.1" fill="#f4d27a"/></g>
+</svg>

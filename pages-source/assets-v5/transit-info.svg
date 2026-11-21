@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" role="img" aria-labelledby="title">
+  <title id="title">Helyi vonat és busz</title>
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#b7e5fa"/><stop offset="1" stop-color="#edf6ef"/></linearGradient><linearGradient id="hills" x2="0" y2="1"><stop stop-color="#acd692"/><stop offset="1" stop-color="#4b936e"/></linearGradient></defs>
+  <rect width="240" height="140" rx="18" fill="url(#sky)"/>
+  <path d="M0 104q39-38 78 0t78 0q42-33 84 0v36H0z" fill="url(#hills)"/>
+  <g transform="translate(29 42)"><rect width="94" height="53" rx="12" fill="#315b92"/><rect x="9" y="9" width="76" height="21" rx="5" fill="#e9f8ff"/><rect x="13" y="35" width="30" height="7" rx="3" fill="#81d4c6"/><rect x="51" y="35" width="27" height="7" rx="3" fill="#81d4c6"/><circle cx="20" cy="55" r="7" fill="#29415a"/><circle cx="73" cy="55" r="7" fill="#29415a"/></g>
+  <g transform="translate(146 62)"><rect width="62" height="38" rx="8" fill="#f1a84b"/><rect x="7" y="6" width="48" height="14" rx="4" fill="#fff6dc"/><circle cx="14" cy="40" r="5" fill="#29415a"/><circle cx="48" cy="40" r="5" fill="#29415a"/></g>
+  <path d="M16 111h208" stroke="#f7f5e8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M0 120h240m0 5H0" stroke="#9a7954" stroke-width="2" opacity=".65"/>
+  <g stroke="#d9c89c" stroke-width="3"><path d="M24 112v16M44 112v16M64 112v16M84 112v16M104 112v16M124 112v16M144 112v16M164 112v16M184 112v16M204 112v16"/></g>
+  <g fill="#f5e5bd"><rect x="39" y="49" width="10" height="4" rx="2"/><rect x="54" y="49" width="10" height="4" rx="2"/><rect x="69" y="49" width="10" height="4" rx="2"/><rect x="164" y="71" width="8" height="4" rx="2"/><rect x="177" y="71" width="8" height="4" rx="2"/></g>
+  <g fill="#205d49"><path d="M7 107q-2-17 7-23 9 6 7 23z"/><path d="M224 108q-2-15 7-21 9 6 7 21z"/></g>
+  <path d="M15 96q23-9 44 0m128-1q22-9 40 0" fill="none" stroke="#d5e7b2" stroke-width="2"/>
+  <g transform="translate(199 38)"><path d="M12 50V4m-8 0h16" stroke="#f1e7c9" stroke-width="3"/><circle cx="12" cy="3" r="4" fill="#e7a048"/><path d="M5 29h14" stroke="#f6ead1" stroke-width="3"/></g>
+  <g fill="#eff2bf" opacity=".9"><circle cx="17" cy="89" r="2"/><circle cx="228" cy="83" r="2"/><circle cx="215" cy="92" r="1.5"/></g>
+  <path d="M5 101q18-11 36 0m157 1q18-12 36 0" fill="none" stroke="#d7edac" stroke-width="2"/>
+  <g fill="#fffdf0" opacity=".9"><ellipse cx="18" cy="20" rx="10" ry="4"/><ellipse cx="26" cy="18" rx="7" ry="6"/><ellipse cx="34" cy="20" rx="9" ry="4"/><ellipse cx="178" cy="30" rx="10" ry="4"/><ellipse cx="186" cy="28" rx="7" ry="6"/><ellipse cx="194" cy="30" rx="9" ry="4"/></g>
+  <g transform="translate(215 54)"><path d="M5 0v47" stroke="#526f70" stroke-width="3"/><rect x="0" y="8" width="12" height="27" rx="4" fill="#eff0dc" stroke="#526f70" stroke-width="2"/><circle cx="6" cy="15" r="3" fill="#e96955"/><circle cx="6" cy="27" r="3" fill="#62b77e"/><path d="M1 48h9" stroke="#526f70" stroke-width="3"/></g>
+  <path d="M130 102h70" stroke="#f3f1dc" stroke-width="2" stroke-dasharray="5 5"/>
+  <g fill="#f5e5bd"><rect x="46" y="51" width="10" height="4" rx="2"/><rect x="61" y="51" width="10" height="4" rx="2"/><rect x="178" y="72" width="8" height="4" rx="2"/></g>
+</svg>

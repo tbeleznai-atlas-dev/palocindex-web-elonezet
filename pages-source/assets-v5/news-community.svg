@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img">
+  <title id="title">Ellenőrzött közlemény és közösségi védelem</title>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#583c82"/><stop offset="1" stop-color="#bd5d78"/></linearGradient></defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg)"/>
+  <circle cx="520" cy="80" r="96" fill="#fff" opacity=".08"/>
+  <path d="M320 54 475 112v97c0 77-64 124-155 158-91-34-155-81-155-158v-97z" fill="#fff" opacity=".95"/>
+  <path d="m250 190 48 47 98-105" fill="none" stroke="#269578" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M93 287h135m184 0h135" stroke="#fff" stroke-width="14" stroke-linecap="round" opacity=".7"/>
+<g fill="#fff"><circle cx="77" cy="78" r="6" opacity=".7"/><circle cx="105" cy="62" r="4" opacity=".45"/><circle cx="534" cy="270" r="7" opacity=".55"/></g><path d="M87 110q-32 25-22 68m488-70q30 27 18 64" fill="none" stroke="#f6d4c9" stroke-width="8" opacity=".55"/><path d="M270 272h100" stroke="#aab9d3" stroke-width="8" stroke-linecap="round"/><circle cx="320" cy="272" r="13" fill="#f2b360"/><path d="M320 265v14m-7-7h14" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<defs><linearGradient id="editorial-accent" x2="1" y2="1"><stop stop-color="#fff4d0"/><stop offset="1" stop-color="#85c9a2"/></linearGradient></defs>
+<path d="M120 276h75m350 0h55" stroke="#ece5f7" stroke-width="8" stroke-linecap="round" opacity=".6"/><circle cx="112" cy="255" r="4" fill="#ffc96d"/><circle cx="532" cy="242" r="4" fill="#ffc96d"/><path d="M300 112h40m-20-20v40" stroke="#d6e4f0" stroke-width="5" stroke-linecap="round"/><path d="m270 287 15-10 15 10m55 0 15-10 15 10" fill="none" stroke="#9cb1c8" stroke-width="4"/>
+<circle cx="300" cy="145" r="3" fill="#ffbd68"/><circle cx="340" cy="145" r="3" fill="#ffbd68"/>
+</svg>

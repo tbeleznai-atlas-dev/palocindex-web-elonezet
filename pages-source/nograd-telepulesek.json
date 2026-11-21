@@ -1,0 +1,1270 @@
+{
+  "source": "https://www.ksh.hu/docs/helysegnevtar/hnt_letoltes_2026.xlsx",
+  "source_checked_on": "2026-11-16",
+  "official_reference": {
+    "source": "https://www.ksh.hu/apps/hntr.main",
+    "workbook": "https://www.ksh.hu/docs/helysegnevtar/hnt_letoltes_2026.xlsx",
+    "count_reference": "https://www.ksh.hu/stadat_files/fol/hu/fol0007.html",
+    "reference_date": "2026-01-01",
+    "verified_town_count": 131,
+    "verification_scope": "A Nógrád vármegyei településneveket és járásbesorolásokat soronként összevetettük a KSH 2026. január 1-jei hivatalos helységnévtárával; mind a 131 sor egyezett."
+  },
+  "note": "A településnevek és járásbesorolások a KSH 2026. január 1-jei hivatalos helységnévtárával ellenőrizve. Az önkormányzati honlapcímek, elérhetőségek és hírek külön ellenőrzés nélkül nem jelennek meg hivatalos adatként.",
+  "towns": [
+    {
+      "name": "Balassagyarmat",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://www.balassagyarmat.hu/",
+        "source": "https://or.njt.hu/onkormanyzati-rendelet/2011-10-SP-491",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Becske",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://www.becske.hu/",
+        "source": "https://or.njt.hu/jogszabaly/2024-6-SP-5Y495.1",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Bercel",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://bercel.hu/",
+        "source": "https://bercel.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Cserháthaláp",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://www.cserhathalap.hu/",
+        "source": "https://www.cserhathalap.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Cserhátsurány",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://cserhatsurany.hu/",
+        "source": "https://cserhatsurany.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Csesztve",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://csesztve.hu/",
+        "source": "https://csesztve.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Csitár",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://csitar.hu/",
+        "source": "https://csitar.hu/elerhetoseg/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Debercsény",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://www.debercseny.hu/",
+        "source": "https://www.debercseny.hu/elerhetosegeink/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Dejtár",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://dejtar.hu/",
+        "source": "https://dejtar.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Drégelypalánk",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://dregelypalank.hu/",
+        "source": "https://dregelypalank.hu/onkormanyzat/dregelypalanki-kozos-onkormanyzati-hivatal/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Érsekvadkert",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://ersekvadkert.hu/",
+        "source": "https://ersekvadkert.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Galgaguta",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://galgaguta.hu/?page_id=10454",
+        "source": "https://njt.jog.gov.hu/jogszabaly/2026-1-SP-5Y532",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Herencsény",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://herencseny.hu/",
+        "source": "https://herencseny.hu/elerhetosegeink/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Hont",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://wp.hont.hu/",
+        "source": "https://wp.hont.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Hugyag",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://hugyag.asp.lgov.hu/",
+        "source": "https://or.njt.hu/onkormanyzati-rendelet/2019-8-SP-540",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Iliny",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://iliny.asp.lgov.hu/",
+        "source": "https://iliny.asp.lgov.hu/kozerdeku-adatok",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Ipolyszög",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://ipolyszog.hu/",
+        "source": "https://ipolyszog.hu/onkormanyzat/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Ipolyvece",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://ipolyvece.hu/",
+        "source": "https://ipolyvece.hu/kozerdeku-adatok/szervezeti-szemelyzeti-adatok-cimek-telefonszamok/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Magyarnándor",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://magyarnandor.hu/",
+        "source": "https://magyarnandor.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Mohora",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://mohora.hu/",
+        "source": "https://mohora.hu/elerhetosegeink/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nógrádkövesd",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://kovesdfalu.hu/",
+        "source": "https://kovesdfalu.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nógrádmarcal",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://www.nogradmarcal.hu/",
+        "source": "https://www.nogradmarcal.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Őrhalom",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://orhalom.asp.lgov.hu/",
+        "source": "https://orhalom.asp.lgov.hu/kozerdeku-adatok",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Patak",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://patak.hu/",
+        "source": "https://patak.hu/2-szervezeti-struktura/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Patvarc",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://patvarc.hu/",
+        "source": "https://patvarc.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szanda",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://szanda.hu/",
+        "source": "https://szanda.hu/hu/hivatal/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szécsénke",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://szecsenke.hu/",
+        "source": "https://szecsenke.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szügy",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://www.szugy.hu/",
+        "source": "https://njt.jog.gov.hu/jogszabaly/2020-9-SP-5Y647",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Terény",
+      "district": "Balassagyarmati járás",
+      "official_website": {
+        "url": "https://tereny.hu/",
+        "source": "https://tereny.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Bátonyterenye",
+      "district": "Bátonyterenyei járás",
+      "official_website": {
+        "url": "https://batonyterenye.hu/",
+        "source": "https://batonyterenye.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Dorogháza",
+      "district": "Bátonyterenyei járás",
+      "official_website": {
+        "url": "https://www.doroghaza.hu/",
+        "source": "https://www.doroghaza.hu/index.php/3-adatkezelesi-tajekoztato",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Mátramindszent",
+      "district": "Bátonyterenyei járás",
+      "official_website": {
+        "url": "https://www.matramindszent.hu/",
+        "source": "https://www.matramindszent.hu/attachments/article/259/k%C3%B6z%C3%A9rdek%C5%B1%20adatok%20Mm.pdf",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Mátranovák",
+      "district": "Bátonyterenyei járás",
+      "official_website": {
+        "url": "https://matranovak.hu/",
+        "source": "https://matranovak.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Mátraterenye",
+      "district": "Bátonyterenyei járás",
+      "official_website": {
+        "url": "https://www.matraterenye.hu/",
+        "source": "https://www.matraterenye.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Mátraverebély",
+      "district": "Bátonyterenyei járás",
+      "official_website": {
+        "url": "https://www.matraverebely.hu/2018/index.php",
+        "source": "https://www.matraverebely.hu/2018/index.php",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nemti",
+      "district": "Bátonyterenyei járás",
+      "official_website": {
+        "url": "https://nemti.hu/",
+        "source": "https://nemti.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szuha",
+      "district": "Bátonyterenyei járás",
+      "official_website": {
+        "url": "https://www.szuha.hu/",
+        "source": "https://www.szuha.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Alsótold",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.alsotold.hu/",
+        "source": "https://www.alsotold.hu/hivatal/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Bér",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.ber.hu/",
+        "source": "https://www.ber.hu/index.php/kozseghaza/ber-honlap-nyilatkozatok",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Bokor",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://bokor.hu/",
+        "source": "https://bokor.hu/kapcsolat",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Buják",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://bujak.hu/",
+        "source": "https://hakka.allamkincstar.gov.hu/Adohatosag.aspx?PIR=450845",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Csécse",
+      "district": "Pásztói járás",
+      "website_review": {
+        "url": "https://csecse.hu/",
+        "source": "https://www.csecse.hu/dokumentumok/Adatkezelesi/Adatkezelesi.pdf",
+        "checked_on": "2026-11-16",
+        "status": "suspicious_external_links",
+        "note": "A honlap biztonsági ellenőrzés alatt áll, ezért a hivatkozás egyelőre nem nyitható meg."
+      },
+      "official_registry": {
+        "url": "https://kozadat.hu/kereso/kozfeladatot-ellato-szervek/adatlap/6774",
+        "label": "Csécse Község Önkormányzata – adatlap a Közadatkeresőben ↗",
+        "source": "https://kozadat.hu/kereso/kapcsolat",
+        "checked_on": "2026-11-17"
+      }
+    },
+    {
+      "name": "Cserhátszentiván",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://cserhatszentivan.hu/",
+        "source": "https://cserhatszentivan.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Ecseg",
+      "district": "Pásztói járás",
+      "website_review": {
+        "url": "https://www.ecseg.hu/",
+        "source": "https://njt.jog.gov.hu/jogszabaly/2024-11-SP-5Y520",
+        "checked_on": "2026-11-16",
+        "status": "suspicious_external_links",
+        "note": "A honlap biztonsági ellenőrzés alatt áll, ezért a hivatkozás egyelőre nem nyitható meg."
+      },
+      "official_registry": {
+        "url": "https://kozadat.hu/kereso/kozfeladatot-ellato-szervek/adatlap/1061",
+        "label": "Ecseg Község Önkormányzata – adatlap a Közadatkeresőben ↗",
+        "source": "https://kozadat.hu/kereso/kapcsolat",
+        "checked_on": "2026-11-17"
+      }
+    },
+    {
+      "name": "Egyházasdengeleg",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.dengeleg.hu/",
+        "source": "https://www.dengeleg.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Erdőkürt",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.erdokurt.hu/",
+        "source": "https://www.erdokurt.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Erdőtarcsa",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://erdotarcsa-hu.webnode.hu/",
+        "source": "https://erdotarcsa-hu.webnode.hu/elerhetosegek/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Felsőtold",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://felsotold.hu/",
+        "source": "https://felsotold.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Garáb",
+      "district": "Pásztói járás",
+      "website_review": {
+        "url": "https://garab.hu/",
+        "source": "https://www.cserhatalja.eu/index.php/rolunk/koezoesseguenk",
+        "checked_on": "2026-11-16",
+        "status": "dns_unresolved",
+        "note": "A honlap biztonsági ellenőrzés alatt áll, ezért a hivatkozás egyelőre nem nyitható meg."
+      },
+      "official_contact_page": {
+        "url": "https://matraszolos.asp.lgov.hu/kozerdeku-adatok-igenylese-0",
+        "label": "Közérdekű adatok igénylése – Mátraszőlősi Közös Önkormányzati Hivatal",
+        "source": "https://njt.jog.gov.hu/jogszabaly/2025-6-SP-5Y582",
+        "checked_on": "2026-11-17"
+      },
+      "official_registry": {
+        "url": "https://kozadat.hu/kereso/intezmeny/adatlap/1179",
+        "label": "Garáb Község Önkormányzata – adatlap a Közadatkeresőben ↗",
+        "source": "https://kozadat.hu/kereso/kapcsolat",
+        "checked_on": "2026-11-17"
+      }
+    },
+    {
+      "name": "Héhalom",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.hehalom.hu/",
+        "source": "https://www.hehalom.hu/index.php/hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Jobbágyi",
+      "district": "Pásztói járás",
+      "official_registry": {
+        "url": "https://kozadat.hu/kereso/intezmeny/adatlap/3101",
+        "label": "Jobbágyi Község Önkormányzata – adatlap a Közadatkeresőben ↗",
+        "source": "https://kozadat.hu/kereso/kapcsolat",
+        "checked_on": "2026-11-17"
+      },
+      "website_review": {
+        "url": "http://jobbagyi.hu/",
+        "source": "https://www.kozbeszerzes.hu/media/issue/pdf/signed/KE-2025-174.pdf",
+        "checked_on": "2026-11-16",
+        "status": "tls_name_mismatch",
+        "note": "A honlap biztonsági ellenőrzés alatt áll, ezért a hivatkozás egyelőre nem nyitható meg."
+      }
+    },
+    {
+      "name": "Kálló",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.kallo.hu/",
+        "source": "https://www.kallo.hu/index.php/kallo-onkormanyzatok-menu/kallo-onkormanyzat-kozadattar-menu",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Kisbágyon",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.kisbagyon.hu/",
+        "source": "https://kisbagyon.hu/rendeletek/szmsz.pdf",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Kozárd",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://kozard.hu/",
+        "source": "https://kozard.hu/kapcsolat/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Kutasó",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://kutaso.hu/",
+        "source": "https://kutaso.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Mátraszőlős",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://matraszolos.asp.lgov.hu/",
+        "source": "https://matraszolos.asp.lgov.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Palotás",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.palotas.hu/",
+        "source": "https://www.palotas.hu/elerhetoseg.html",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Pásztó",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.paszto.hu/",
+        "source": "https://www.paszto.hu/kozerdeku/kozerdeku_adatok",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szarvasgede",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "http://szarvasgede.hu/szarvasgede-kozseg-onkormanyzata/",
+        "source": "https://dmrvzrt.hu/static/internet/download/EMO7_projekt_PR__es_tajekoztatasi_tevekenysegosszegezes.pdf",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szirák",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.szirak.hu/",
+        "source": "https://www.szirak.hu/",
+        "checked_on": "2026-11-17"
+      }
+    },
+    {
+      "name": "Szurdokpüspöki",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://szpuspoki.hu/",
+        "source": "https://szpuspoki.hu/onkormanyzat/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Tar",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.tarkozseg.hu/",
+        "source": "https://www.tarkozseg.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Vanyarc",
+      "district": "Pásztói járás",
+      "official_website": {
+        "url": "https://www.vanyarc.hu/",
+        "source": "https://www.vanyarc.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Alsópetény",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://www.alsopeteny.hu/",
+        "source": "https://www.alsopeteny.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Bánk",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://www.bank-falu.hu/",
+        "source": "https://bank-falu.hu/bank/onkormanyzati_hivatal",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Berkenye",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://www.berkenye.hu/",
+        "source": "https://www.berkenye.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Borsosberény",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://borsosbereny.hu/",
+        "source": "https://borsosbereny.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Diósjenő",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://diosjeno.hu/",
+        "source": "https://diosjeno.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Felsőpetény",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://www.felsopeteny.hu/",
+        "source": "https://www.felsopeteny.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Horpács",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://horpacs.hu/",
+        "source": "https://horpacs.hu/kozerdeku-adatok/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Keszeg",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://keszeg.hu/",
+        "source": "https://keszeg.hu/adatvedelem",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Kétbodony",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://ketbodony.hu/",
+        "source": "https://ketbodony.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Kisecset",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://kisecset.hu/",
+        "source": "https://kisecset.hu/index.php/kapcsolat3",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Legénd",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://legend.hu/index.php/hu/",
+        "source": "https://legend.hu/index.php/hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nagyoroszi",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://nagyoroszi.hu/",
+        "source": "https://nagyoroszi.hu/onkormanyzat/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nézsa",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://www.nezsa.hu/",
+        "source": "https://www.nezsa.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nógrád",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://nogradkozseg.hu/",
+        "source": "https://or.njt.hu/onkormanyzati-rendelet/2024-12-SP-599",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nógrádsáp",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://nogradsap.hu/hu/onkormanyzat/onkormanyzat/",
+        "source": "https://nogradsap.hu/hu/onkormanyzat/onkormanyzat/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nőtincs",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://notincs.hu/",
+        "source": "https://notincs.hu/onkormanyzat/kozos-onkormanyzati-hivatal/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Ősagárd",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://osagard.hu/",
+        "source": "https://osagard.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Pusztaberki",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://pusztaberki.hu/",
+        "source": "https://pusztaberki.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Rétság",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://retsag.hu/",
+        "source": "https://retsag.hu/cimek-telefonszamok/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Romhány",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://romhany.hu/",
+        "source": "https://hakka.allamkincstar.gov.hu/Adohatosag.aspx?PIR=451633",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szátok",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://szatok.hu/",
+        "source": "https://szatok.hu/informaciok/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szendehely",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://szendehely.hu/",
+        "source": "https://or.njt.hu/onkormanyzati-rendelet/2017-4-SP-639",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szente",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://www.szentekozseg.hu/",
+        "source": "https://www.szentekozseg.hu/kapcsolat/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Tereske",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://tereske.hu/",
+        "source": "https://tereske.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Tolmács",
+      "district": "Rétsági járás",
+      "official_website": {
+        "url": "https://www.tolmacs.hu/lap0.htm",
+        "source": "https://www.tolmacs.hu/lap0.htm",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Bárna",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://www.barna.hu/",
+        "source": "https://www.barna.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Cered",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://cered.hu/",
+        "source": "https://cered.hu/kozseghaza/ugyintezes/ugyfelfogadas/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Egyházasgerge",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://egyhazasgerge.asp.lgov.hu/",
+        "source": "https://egyhazasgerge.asp.lgov.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Etes",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://etes.asp.lgov.hu/",
+        "source": "https://etes.asp.lgov.hu/ugyfelfogadas-elerhetosegek",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Ipolytarnóc",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://ipolytarnoc.asp.lgov.hu/",
+        "source": "https://ipolytarnoc.asp.lgov.hu/kozerdeku-adatok",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Karancsalja",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://www.karancsalja.hu/",
+        "source": "https://www.karancsalja.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Karancsberény",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://www.karancsbereny.hu/",
+        "source": "https://www.karancsbereny.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Karancskeszi",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://karancskeszi.hu/",
+        "source": "https://karancskeszi.hu/onkormanyzat/polgarmesteri_hivatal",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Karancslapujtő",
+      "district": "Salgótarjáni járás",
+      "website_review": {
+        "url": "https://www.karancslapujto.hu/",
+        "source": "https://hakka.allamkincstar.gov.hu/Adohatosag.aspx?PIR=735386",
+        "checked_on": "2026-11-16",
+        "status": "tls_untrusted_issuer",
+        "note": "A honlap biztonsági ellenőrzés alatt áll, ezért a hivatkozás egyelőre nem nyitható meg."
+      },
+      "official_registry": {
+        "url": "https://kozadat.hu/kereso/intezmeny/adatlap/3982",
+        "label": "Karancslapujtői Közös Önkormányzati Hivatal – adatlap a Közadatkeresőben ↗",
+        "source": "https://kozadat.hu/kereso/kapcsolat",
+        "checked_on": "2026-11-17"
+      }
+    },
+    {
+      "name": "Karancsság",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://karancssag.asp.lgov.hu/",
+        "source": "https://karancssag.asp.lgov.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Kazár",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://kazar.hu/",
+        "source": "https://kazar.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Kisbárkány",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://www.kisbarkanykozseg.hu/",
+        "source": "https://www.kisbarkanykozseg.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Kishartyán",
+      "district": "Salgótarjáni járás",
+      "website_review": {
+        "url": "https://www.kishartyan.hu/",
+        "source": "https://www.naih.hu/dontesek-informacioszabadsag-tajekoztatok-kozlemenyek?download=1141%3Akozfeladatot-ellato-szervek-adatszolgaltatasa-2024-ev",
+        "checked_on": "2026-11-16",
+        "status": "tls_name_mismatch",
+        "note": "A honlap biztonsági ellenőrzés alatt áll, ezért a hivatkozás egyelőre nem nyitható meg."
+      },
+      "official_contact_page": {
+        "url": "https://sagujfalu.asp.lgov.hu/kozerdeku-adatok-igenylese",
+        "label": "Közérdekű adatok igénylése – Ságújfalui Közös Önkormányzati Hivatal",
+        "source": "https://sagujfalu.asp.lgov.hu/kozerdeku-adatok-igenylese",
+        "checked_on": "2026-11-17"
+      },
+      "official_registry": {
+        "url": "https://kozadat.hu/kereso/intezmeny/adatlap/4639",
+        "label": "Kishartyán Község Önkormányzata – adatlap a Közadatkeresőben ↗",
+        "source": "https://kozadat.hu/kereso/kapcsolat",
+        "checked_on": "2026-11-17"
+      }
+    },
+    {
+      "name": "Litke",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://litke.hu/",
+        "source": "https://hakka.allamkincstar.gov.hu/Adohatosag.aspx?PIR=548728",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Lucfalva",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://lucfalva.hu/2020/",
+        "source": "https://lucfalva.hu/2020/index.php/kapcsolat",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Márkháza",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://markhaza.hu/content/kozsegunk-markhaza",
+        "source": "https://markhaza.hu/content/kozsegunk-markhaza",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Mátraszele",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://www.matraszele.hu/",
+        "source": "https://www.matraszele.hu/index.php/szervezeti-szemelyzeti-adatok/adatkezeloi-nyilvantartas?id=11&view=category",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Mihálygerge",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://mihalygerge.asp.lgov.hu/",
+        "source": "https://mihalygerge.asp.lgov.hu/impresszum",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nagybárkány",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://www.nagybarkany.hu/",
+        "source": "https://www.kozbeszerzes.hu/media/issue/pdf/signed/KE-2024-195.pdf",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nagykeresztúr",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://www.nagykeresztur.hu/",
+        "source": "https://www.naih.hu/dontesek-informacioszabadsag-tajekoztatok-kozlemenyek?download=1141%3Akozfeladatot-ellato-szervek-adatszolgaltatasa-2024-ev",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Rákóczibánya",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://www.rakoczibanya.hu/",
+        "source": "https://www.kozadat.hu/kereso/talalatok/3919",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Ságújfalu",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://sagujfalu.asp.lgov.hu/",
+        "source": "https://sagujfalu.asp.lgov.hu/ugyfelfogadas",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Salgótarján",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://www.salgotarjan.hu/",
+        "source": "https://www.salgotarjan.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Sámsonháza",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "source": "https://samsonhaza.hu/",
+        "checked_on": "2026-11-17",
+        "url": "https://samsonhaza.hu/"
+      }
+    },
+    {
+      "name": "Somoskőújfalu",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://somoskoujfalu.asp.lgov.hu/",
+        "source": "https://somoskoujfalu.asp.lgov.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Sóshartyán",
+      "district": "Salgótarjáni járás",
+      "website_review": {
+        "url": "http://www.soshartyan.hu/new",
+        "source": "https://kozfoglalkoztatas.kormany.hu/download/b/43/e0000/K%25C3%25B6zfoglalkoztatas%2520Magyarorsz%25C3%25A1gon%25202012%25E2%2580%25932013.pdf",
+        "checked_on": "2026-11-16",
+        "status": "tls_name_mismatch",
+        "note": "A honlap biztonsági ellenőrzés alatt áll, ezért a hivatkozás egyelőre nem nyitható meg."
+      },
+      "official_registry": {
+        "url": "https://njt.jog.gov.hu/eli/kshkodok",
+        "label": "Nemzeti Jogszabálytár településkód-jegyzéke · 452256",
+        "source": "https://njt.jog.gov.hu/eli/kshkodok",
+        "checked_on": "2026-11-19"
+      }
+    },
+    {
+      "name": "Szilaspogony",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://szilaspogony.asp.lgov.hu/",
+        "source": "https://szilaspogony.asp.lgov.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Vizslás",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://www.vizslas.hu/",
+        "source": "https://www.vizslas.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Zabar",
+      "district": "Salgótarjáni járás",
+      "official_website": {
+        "url": "https://zabar.asp.lgov.hu/",
+        "source": "https://zabar.asp.lgov.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Endrefalva",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://endrefalva.asp.lgov.hu/",
+        "source": "https://endrefalva.asp.lgov.hu/kozerdeku-adatok",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Hollókő",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://www.holloko.info/",
+        "source": "https://www.holloko.info/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Ludányhalászi",
+      "district": "Szécsényi járás",
+      "website_review": {
+        "url": "http://www.ludanyhalaszi.hu/",
+        "source": "https://www.kozbeszerzes.hu/media/issue/pdf/signed/KE-2025-141_.pdf",
+        "checked_on": "2026-11-16",
+        "status": "tls_name_mismatch",
+        "note": "A honlap biztonsági ellenőrzés alatt áll, ezért a hivatkozás egyelőre nem nyitható meg."
+      },
+      "official_registry": {
+        "url": "https://kozadat.hu/kereso/kozfeladatot-ellato-szervek/adatlap/4229",
+        "label": "Ludányhalászi Község Önkormányzata – adatlap a Közadatkeresőben ↗",
+        "source": "https://kozadat.hu/kereso/kapcsolat",
+        "checked_on": "2026-11-17"
+      }
+    },
+    {
+      "name": "Magyargéc",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://www.magyargec.hu/",
+        "source": "https://www.magyargec.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nagylóc",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://nagyloc.asp.lgov.hu/",
+        "source": "https://nagyloc.asp.lgov.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nógrádmegyer",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://www.nogradmegyer.hu/",
+        "source": "https://www.nogradmegyer.hu/intezmenyek",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nógrádsipek",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://sipek.hu/",
+        "source": "https://or.njt.hu/eli/451369/r/2025/1/alaprendelet",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Nógrádszakál",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://nogradszakal.hu/",
+        "source": "https://nogradszakal.hu/?oldal=853",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Piliny",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://piliny.hu/",
+        "source": "https://piliny.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Rimóc",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://rimoc.asp.lgov.hu/",
+        "source": "https://rimoc.asp.lgov.hu/altalanos-kozzeteteli-lista-onkormanyzat",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szalmatercs",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://szalmatercs.asp.lgov.hu/",
+        "source": "https://szalmatercs.asp.lgov.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szécsény",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://szecseny.hu/",
+        "source": "https://szecseny.hu/kapcsolat-kapcsolat/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Szécsényfelfalu",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://szecsenyfelfalu.asp.lgov.hu/",
+        "source": "https://szecsenyfelfalu.asp.lgov.hu/",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "name": "Varsány",
+      "district": "Szécsényi járás",
+      "official_website": {
+        "url": "https://www.varsany.hu/",
+        "source": "https://www.varsany.hu/",
+        "checked_on": "2026-11-16"
+      }
+    }
+  ]
+}

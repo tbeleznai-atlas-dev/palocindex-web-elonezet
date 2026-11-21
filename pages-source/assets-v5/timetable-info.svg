@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" role="img" aria-labelledby="title">
+  <title id="title">Vonat- és buszmenetrend</title>
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#dff2fb"/><stop offset="1" stop-color="#f7f8e8"/></linearGradient><linearGradient id="hills" x2="0" y2="1"><stop stop-color="#b4d999"/><stop offset="1" stop-color="#5a9c73"/></linearGradient></defs>
+  <rect width="240" height="140" rx="18" fill="url(#sky)"/>
+  <path d="M0 103q43-34 82 0t79 0q39-29 79 0v37H0z" fill="url(#hills)"/>
+  <g transform="translate(22 29)"><rect width="118" height="72" rx="9" fill="#fffdf1" stroke="#456783" stroke-width="4"/><path d="M0 18h118" stroke="#456783" stroke-width="4"/><circle cx="13" cy="9" r="2.5" fill="#f1a74c"/><circle cx="23" cy="9" r="2.5" fill="#70b785"/><rect x="13" y="29" width="23" height="6" rx="3" fill="#3185aa"/><rect x="46" y="29" width="54" height="6" rx="3" fill="#cadae4"/><rect x="13" y="44" width="23" height="6" rx="3" fill="#ef9e45"/><rect x="46" y="44" width="42" height="6" rx="3" fill="#cadae4"/><rect x="13" y="59" width="23" height="6" rx="3" fill="#56a77c"/><rect x="46" y="59" width="48" height="6" rx="3" fill="#cadae4"/></g>
+  <g transform="translate(156 47)"><circle cx="30" cy="30" r="30" fill="#fff" stroke="#e9ae4e" stroke-width="6"/><path d="M30 12v19l13 8" fill="none" stroke="#315b82" stroke-width="5" stroke-linecap="round"/><path d="M30 3v7M57 30h-7" stroke="#315b82" stroke-width="4" stroke-linecap="round"/></g>
+  <path d="M13 116h214" stroke="#fff9e9" stroke-width="5" stroke-linecap="round"/>
+  <path d="M7 123h224" stroke="#927951" stroke-width="2" opacity=".7"/>
+  <g fill="#1d5e49"><path d="M4 113q-2-19 8-27 10 8 8 27z"/><path d="M213 112q-2-22 9-30 11 8 9 30z"/></g>
+  <g stroke="#efdda9" stroke-width="2"><path d="M18 110h17M18 114h17M206 107h14M206 111h14"/></g>
+  <g fill="#f2df92"><circle cx="15" cy="129" r="2.5"/><circle cx="225" cy="130" r="2.5"/><circle cx="189" cy="127" r="2"/></g>
+  <path d="M126 27q12-7 24 0m-21 5q9-5 18 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+  <g fill="#fff4c6" opacity=".9"><circle cx="18" cy="69" r="2"/><circle cx="30" cy="76" r="1.5"/><circle cx="218" cy="66" r="2"/><circle cx="205" cy="75" r="1.5"/></g>
+  <path d="M1 133q27-8 55 0m127-1q28-8 56 0" fill="none" stroke="#5c9469" stroke-width="2" opacity=".7"/>
+  <g fill="#fffdf0" opacity=".9"><ellipse cx="178" cy="20" rx="11" ry="5"/><ellipse cx="187" cy="17" rx="8" ry="7"/><ellipse cx="197" cy="20" rx="11" ry="5"/></g>
+  <g transform="translate(211 72)"><path d="M8 0v45" stroke="#536f77" stroke-width="3"/><path d="M1 7h14v19H1z" fill="#f2b650" stroke="#fff4d3" stroke-width="2"/><path d="M4 13h8m-8 5h8" stroke="#456783" stroke-width="2"/><path d="M0 45h16" stroke="#536f77" stroke-width="3"/></g>
+  <path d="M149 112q15-8 29 0m-27 5q13-6 25 0" fill="none" stroke="#e8f0c7" stroke-width="2"/>
+  <g fill="#6d9e74"><circle cx="187" cy="108" r="3"/><circle cx="193" cy="105" r="3"/><circle cx="199" cy="108" r="3"/></g>
+</svg>

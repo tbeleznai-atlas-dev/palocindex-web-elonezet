@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" role="img" aria-labelledby="title">
+  <title id="title">Útjavítás és munkaterület</title>
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#d8f2fa"/><stop offset="1" stop-color="#f7f5df"/></linearGradient><linearGradient id="hills" x2="0" y2="1"><stop stop-color="#a9d18c"/><stop offset="1" stop-color="#4b936e"/></linearGradient></defs>
+  <rect width="240" height="140" rx="18" fill="url(#sky)"/>
+  <path d="M0 104 45 64l39 33 44-51 46 58 30-35 36 35v36H0z" fill="url(#hills)"/>
+  <path d="M35 140 85 91h70l51 49z" fill="#526a77"/>
+  <path d="m81 140 31-49h16l-19 49z" fill="#f5cc62"/>
+  <g transform="translate(140 52)"><path d="M27 0 52 43H2z" fill="#f09a37" stroke="#fff5dc" stroke-width="4"/><path d="M13 25h28" stroke="#fff5dc" stroke-width="7"/><rect x="0" y="43" width="55" height="7" rx="3" fill="#314e61"/></g>
+  <g transform="translate(37 78)"><rect width="27" height="24" rx="4" fill="#f7f3dc" stroke="#31536a" stroke-width="3"/><path d="M6 7h15M6 13h15M6 19h10" stroke="#31536a" stroke-width="2"/></g>
+  <path d="M10 105q34-18 68 0m93-3q26-13 54 0" fill="none" stroke="#d6e9b5" stroke-width="2" opacity=".75"/>
+  <g transform="translate(20 91)"><path d="M4 25h27M17 4v21" stroke="#f2e9d1" stroke-width="3"/><path d="m4 5 13-4 13 4-3 13H7z" fill="#f1c95b" stroke="#fff2cf" stroke-width="2"/><path d="m10 6 14 10M24 6 10 16" stroke="#ae5d3c" stroke-width="3"/></g>
+  <g fill="#f4e8c2" opacity=".9"><circle cx="172" cy="104" r="2"/><circle cx="182" cy="100" r="2"/><circle cx="193" cy="96" r="2"/></g>
+  <path d="M171 113h48M177 118h36" stroke="#f2d68b" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+  <g fill="#263e47"><circle cx="151" cy="111" r="6"/><circle cx="172" cy="111" r="6"/></g><g fill="#b9c9bf"><circle cx="151" cy="111" r="2.5"/><circle cx="172" cy="111" r="2.5"/></g>
+  <path d="M140 52h19v7h-19z" fill="#d7eddf"/><path d="M144 52v7m7-7v7m7-7v7" stroke="#66858a" stroke-width="1.5"/>
+  <g fill="#fff2c9" opacity=".85"><circle cx="25" cy="52" r="2"/><circle cx="35" cy="47" r="1.5"/><circle cx="208" cy="57" r="2"/><circle cx="219" cy="64" r="1.5"/></g>
+  <path d="M1 132q31-8 61 0m124-2q26-8 52 0" fill="none" stroke="#457f62" stroke-width="2" opacity=".65"/>
+  <g fill="#fffdf0" opacity=".92"><ellipse cx="27" cy="23" rx="12" ry="5"/><ellipse cx="36" cy="20" rx="8" ry="7"/><ellipse cx="45" cy="23" rx="11" ry="5"/></g>
+  <path d="M4 119h23M32 119h20M170 125h23M201 125h18" stroke="#d8e0d2" stroke-width="3" stroke-linecap="round"/>
+  <g transform="translate(82 67)"><path d="M0 24h25l8-10h16" fill="none" stroke="#d99a43" stroke-width="5" stroke-linecap="round"/><path d="M30 14V2h6v12" fill="#e9ab54"/><circle cx="9" cy="27" r="5" fill="#314e61"/><circle cx="39" cy="27" r="5" fill="#314e61"/><path d="M6 22h36" stroke="#f2ca70" stroke-width="4"/></g>
+  <g fill="#f4e8c2"><circle cx="70" cy="105" r="2"/><circle cx="76" cy="110" r="1.5"/><circle cx="166" cy="117" r="2"/></g>
+</svg>

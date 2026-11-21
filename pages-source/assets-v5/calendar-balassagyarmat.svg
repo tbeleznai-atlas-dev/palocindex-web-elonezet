@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" role="img" aria-labelledby="title">
+<title id="title">Városi művelődési ház esti rendezvényre készülve</title>
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b9ddea"/><stop offset="1" stop-color="#f6e5c1"/></linearGradient>
+<linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a6cf91"/><stop offset="1" stop-color="#5d9676"/></linearGradient>
+<linearGradient id="stage" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#71649b"/><stop offset="1" stop-color="#343e69"/></linearGradient>
+<linearGradient id="curtain" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efa07d"/><stop offset="1" stop-color="#b95567"/></linearGradient>
+<linearGradient id="awning" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5c776"/><stop offset="1" stop-color="#dc765f"/></linearGradient>
+<linearGradient id="hills" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7c9ba5"/><stop offset="1" stop-color="#88ae87"/></linearGradient>
+<linearGradient id="canopy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a85258"/><stop offset=".5" stop-color="#e08267"/><stop offset="1" stop-color="#f0bd77"/></linearGradient>
+</defs>
+<rect width="160" height="100" fill="url(#sky)"/>
+<path d="M7 38q9-10 18 0 8-7 16 0" fill="none" stroke="#fff9e8" stroke-width="3" stroke-linecap="round"/>
+<circle cx="144" cy="15" r="8" fill="#ffd46e"/><path d="M144 3v3m0 18v3m-12-12h3m18 0h3" stroke="#f1b65b" stroke-width="1.4"/>
+
+<g stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 77q38-18 78 0t82-4v27H0z" fill="url(#ground)"/><path d="M8 86h144" stroke="#82996e" stroke-width="2"/>
+<path d="M29 34h101v45H29z" fill="#e9d6aa" stroke="#92795f" stroke-width="2"/><path d="M24 35h111l-8-13H33z" fill="#6d8d94" stroke="#536e7c" stroke-width="2"/><path d="M40 22V15h80v7" fill="#dec38d" stroke="#8e735b"/><path d="M46 40h66" stroke="#c3a278" stroke-width="2"/>
+<path d="M39 47h17v19H39zm25 0h17v19H64zm25 0h17v19H89zm24 0h9v32h-9z" fill="#99b9be" stroke="#677f86"/><path d="M42 50h11m-11 4h11m14-4h11m-11 4h11m14-4h11m-11 4h11" stroke="#ddecdf" stroke-width="1"/><path d="M60 79V68h29v11" fill="#986d5f"/><path d="M58 68h33" stroke="#765a57" stroke-width="2"/>
+<path d="M75 14q8-9 16 0" fill="none" stroke="#ce9f62" stroke-width="2"/><circle cx="83" cy="14" r="3" fill="#f5d476"/><path d="M19 78V53m-8 12q8-17 17 0" stroke="#658568" stroke-width="2"/><circle cx="15" cy="53" r="6" fill="#78a273"/><circle cx="23" cy="50" r="7" fill="#6d9a70"/>
+<circle cx="139" cy="62" r="4" fill="#c7866b"/><path d="M135 66h8v12h-8z" fill="#5c8b9e"/><path d="M137 77l-2 7m6-7 2 7" stroke="#594f6d" stroke-width="2"/><circle cx="118" cy="87" r="2" fill="#e7c76c"/><circle cx="124" cy="87" r="2" fill="#d57b73"/><circle cx="130" cy="87" r="2" fill="#78ad8a"/>
+<circle cx="148" cy="16" r="8" fill="#ffd36b"/><path d="M7 93h146" stroke="#9a8a69" stroke-width="1.5"/>
+</g>
+<g aria-hidden="true" opacity=".95" stroke-linecap="round" stroke-linejoin="round"><path d="M10 96v-9m0 5-4-4m4 2 4-4M149 96v-9m0 5-4-4m4 2 4-4M80 96v-7m0 4-3-3m3 2 3-3" fill="none" stroke="#41795b" stroke-width="1.6"/><circle cx="10" cy="85" r="2.4" fill="#ffd46e" stroke="#fff1c4"/><circle cx="149" cy="85" r="2.4" fill="#e78572" stroke="#ffe6bf"/><circle cx="80" cy="87" r="2" fill="#f0c266" stroke="#fff1c4"/><circle cx="5" cy="97" r="1.1" fill="#f4d27a"/><circle cx="25" cy="97" r="1.1" fill="#f4d27a"/><circle cx="135" cy="97" r="1.1" fill="#f4d27a"/><circle cx="155" cy="97" r="1.1" fill="#f4d27a"/></g>
+</svg>
