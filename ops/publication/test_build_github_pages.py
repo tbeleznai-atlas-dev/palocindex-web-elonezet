@@ -18,6 +18,15 @@ class GitHubPagesBuildTests(unittest.TestCase):
             "robots.txt", "sitemap.xml",
         ):
             (self.source / name).write_text("placeholder", encoding="utf-8")
+        districts = [f"Járás {index}" for index in range(1, 7)]
+        towns = [
+            {"name": f"Település {index:03d}", "district": districts[(index - 1) % len(districts)]}
+            for index in range(1, 132)
+        ]
+        (self.source / "nograd-telepulesek.json").write_text(json.dumps({
+            "official_reference": {"verified_town_count": 131, "verified_district_count": 6},
+            "towns": towns,
+        }, ensure_ascii=False), encoding="utf-8")
         (self.source / "index.html").write_text(
             '<link href="/v9.css"><a href="/">Kezdőlap</a>'
             '<a href="/hirdetesek#feltetelek">Hirdetés</a>'
@@ -74,6 +83,15 @@ class GitHubPagesBuildTests(unittest.TestCase):
             build(self.source, output, "/wrong path/")
         self.assertFalse(output.exists())
 
+    def test_incomplete_town_registry_is_rejected(self):
+        registry_path = self.source / "nograd-telepulesek.json"
+        registry = json.loads(registry_path.read_text(encoding="utf-8"))
+        registry["towns"].pop()
+        registry_path.write_text(json.dumps(registry, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "town registry"):
+            build(self.source, self.root / "artifact", "/palocindex-web-elonezet/")
+
 
 if __name__ == "__main__":
     unittest.main()
+
