@@ -90,7 +90,15 @@ def _rewrite_sitemap_routes(text: str) -> str:
 def rewrite_root_urls(text: str, base_path: str) -> str:
     """Prefix root-relative links, assets, and fetch paths for a project site."""
     text = ROOT_ATTRIBUTE.sub(lambda match: match.group("attribute") + base_path + match.group(2), text)
-    text = ROOT_URL.sub(lambda match: match.group("quote") + _prefixed_url(match.group("url"), base_path), text)
+    def rewrite(match: re.Match[str]) -> str:
+        # URL pathname allowlists describe paths on a remote origin, not local
+        # site resources. Keep those literals untouched when building a subpath.
+        preceding = text[:match.start()]
+        if re.search(r"\.pathname(?:\.startsWith\(\s*|\s*===\s*)$", preceding):
+            return match.group(0)
+        return match.group("quote") + _prefixed_url(match.group("url"), base_path)
+
+    text = ROOT_URL.sub(rewrite, text)
     return CSS_URL.sub(
         lambda match: "url(" + match.group("quote") + _prefixed_url(match.group("url"), base_path)
         + match.group("quote") + ")",
@@ -239,3 +247,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
