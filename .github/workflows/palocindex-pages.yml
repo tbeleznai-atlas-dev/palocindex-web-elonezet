@@ -25,7 +25,10 @@ jobs:
         with:
           python-version: "3.12"
       - name: Test Pages packaging
-        run: python -m unittest ops.publication.test_build_github_pages
+        run: >-
+          python -m unittest
+          ops.publication.test_build_github_pages
+          ops.publication.test_sync_github_pages_source
       - name: Validate the site artifact
         run: >-
           python ops/publication/build_github_pages.py
