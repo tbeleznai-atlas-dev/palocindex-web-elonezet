@@ -35,7 +35,8 @@ class GitHubPagesBuildTests(unittest.TestCase):
         )
         (self.source / "site.js").write_text(
             'fetch("/nograd-telepulesek.json"); fetch("/international-news.json");'
-            'fetch("/weather-daily-metno.json"); image.src="/assets-v5/card.svg";',
+            'fetch("/weather-daily-metno.json"); fetch("/weather-daily-ecmwf.json");'
+            'image.src="/assets-v5/card.svg";',
             encoding="utf-8",
         )
         (self.source / "v9.css").write_text(
@@ -74,6 +75,7 @@ class GitHubPagesBuildTests(unittest.TestCase):
         self.assertEqual(manifest["scope"], "/palocindex-web-elonezet/")
         self.assertEqual(manifest["icons"][0]["src"], "/palocindex-web-elonezet/icon-192.png")
         self.assertFalse((output / "server").exists())
+        self.assertFalse((output / "weather-daily-ecmwf.json").exists())
         self.assertEqual((output / "robots.txt").read_text(encoding="utf-8"), "User-agent: *\nDisallow: /\n")
         self.assertEqual(result["file_count"], len(result["sha256"]))
 

@@ -205,7 +205,11 @@ def build(source_dir: Path, output_dir: Path, base_path: str, *, allow_indexing:
             for match in JS_REFERENCE.finditer(script_file.read_text(encoding="utf-8")):
                 _validate_reference(
                     match.group(1), output, base_path,
-                    optional={"international-news.json", "weather-daily-metno.json"},
+                    optional={
+                        "international-news.json",
+                        "weather-daily-ecmwf.json",
+                        "weather-daily-metno.json",
+                    },
                 )
         for stylesheet in output.glob("*.css"):
             for match in CSS_URL.finditer(stylesheet.read_text(encoding="utf-8")):
