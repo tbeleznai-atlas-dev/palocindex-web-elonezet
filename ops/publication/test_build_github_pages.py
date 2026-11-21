@@ -36,7 +36,9 @@ class GitHubPagesBuildTests(unittest.TestCase):
         (self.source / "site.js").write_text(
             'fetch("/nograd-telepulesek.json"); fetch("/international-news.json");'
             'fetch("/weather-daily-metno.json"); fetch("/weather-daily-ecmwf.json");'
-            'image.src="/assets-v5/card.svg";',
+            'image.src="/assets-v5/card.svg";'
+            'if (u.hostname === "odp.met.hu" && u.pathname.startsWith("/weather/text_forecast/regional_forecast/flRs")) {}'
+            'if (u.pathname === "/ODP_altalanos_felhasznalasi_feltetelek.pdf") {}',
             encoding="utf-8",
         )
         (self.source / "v9.css").write_text(
@@ -68,6 +70,8 @@ class GitHubPagesBuildTests(unittest.TestCase):
         js = (output / "site.js").read_text(encoding="utf-8")
         self.assertIn('fetch("/palocindex-web-elonezet/nograd-telepulesek.json")', js)
         self.assertIn('fetch("/palocindex-web-elonezet/international-news.json")', js)
+        self.assertIn('u.pathname.startsWith("/weather/text_forecast/regional_forecast/flRs")', js)
+        self.assertIn('u.pathname === "/ODP_altalanos_felhasznalasi_feltetelek.pdf"', js)
         self.assertIn("url(/palocindex-web-elonezet/assets-v5/card.svg)",
                       (output / "v9.css").read_text(encoding="utf-8"))
         manifest = json.loads((output / "site.webmanifest").read_text(encoding="utf-8"))
@@ -133,3 +137,4 @@ class GitHubPagesBuildTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
