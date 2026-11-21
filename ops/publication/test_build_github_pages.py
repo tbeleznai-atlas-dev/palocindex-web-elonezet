@@ -91,7 +91,43 @@ class GitHubPagesBuildTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "town registry"):
             build(self.source, self.root / "artifact", "/palocindex-web-elonezet/")
 
+    def test_root_domain_build_keeps_root_routes_and_assets(self):
+        (self.source / "sitemap.xml").write_text(
+            "<urlset><url><loc>https://palocindex.hu/hirdetesek</loc></url></urlset>",
+            encoding="utf-8",
+        )
+        output = self.root / "root-artifact"
+        result = build(self.source, output, "/")
+
+        html = (output / "index.html").read_text(encoding="utf-8")
+        self.assertIn('href="/v9.css"', html)
+        self.assertIn('href="/"', html)
+        self.assertIn('href="/hirdetesek.html#feltetelek"', html)
+        self.assertIn('src="/assets-v5/card.svg"', html)
+        self.assertIn("https://palocindex.hu/hirdetesek.html", (output / "sitemap.xml").read_text(encoding="utf-8"))
+        self.assertEqual(result["base_path"], "/")
+
+    def test_root_domain_indexing_is_explicit_and_preserves_robots_policy(self):
+        robots = "User-agent: *\nAllow: /\nSitemap: https://palocindex.hu/sitemap.xml\n"
+        (self.source / "robots.txt").write_text(robots, encoding="utf-8")
+        output = self.root / "indexable-artifact"
+
+        build(self.source, output, "/", allow_indexing=True)
+
+        self.assertEqual((output / "robots.txt").read_text(encoding="utf-8"), robots)
+
+    def test_indexing_requires_an_explicit_allow_all_robots_rule(self):
+        output = self.root / "blocked-indexing-artifact"
+
+        with self.assertRaisesRegex(ValueError, "robots.txt must explicitly allow indexing"):
+            build(self.source, output, "/", allow_indexing=True)
+
+        self.assertFalse(output.exists())
+
+    def test_indexable_build_cannot_use_preview_subpath(self):
+        with self.assertRaisesRegex(ValueError, "root domain path"):
+            build(self.source, self.root / "wrong-indexable-artifact", "/palocindex-web-elonezet/", allow_indexing=True)
+
 
 if __name__ == "__main__":
     unittest.main()
-
