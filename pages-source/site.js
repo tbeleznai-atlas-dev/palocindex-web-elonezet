@@ -331,11 +331,15 @@
     const target=el("international-news-items");
     const placeholder=el("international-news-placeholder");
     if(!status || !target || !placeholder) return;
-    const safeUrl=value=>{
+    const internationalSources={
+      "eurostat-news-releases":{publisher:"Eurostat – Európai Bizottság",attribution:"Forrás: Eurostat – Európai Bizottság",termsUrl:"https://ec.europa.eu/eurostat/help/copyright-notice",hosts:["ec.europa.eu"]},
+      "eu-research-innovation":{publisher:"Európai Bizottság – Kutatás és Innováció",attribution:"Forrás: Európai Bizottság – Kutatás és Innováció (CC BY 4.0)",termsUrl:"https://commission.europa.eu/legal-notice_en",hosts:["research-and-innovation.ec.europa.eu","commission.europa.eu"]},
+    };
+    const safeUrl=(value,hosts)=>{
       try{
         const url=new URL(value);
         return url.protocol==="https:" && !url.username && !url.password && !url.port && !url.hash
-          && url.hostname.toLowerCase().replace(/\.$/,"")==="ec.europa.eu" ? url.href : "";
+          && hosts.includes(url.hostname.toLowerCase().replace(/\.$/,"")) ? url.href : "";
       }catch(_){return "";}
     };
     const date=value=>{
@@ -361,18 +365,21 @@
       const data=await response.json();
       if(data?.schema!=="palocindex.international-news.v1" || data?.status!=="approved_for_public_release"
           || data?.published!==false || !Array.isArray(data.source_ids)
-          || data.source_ids.length!==1 || data.source_ids[0]!=="eurostat-news-releases"
+          || data.source_ids.length!==1 || !internationalSources[data.source_ids[0]]
           || !Array.isArray(data.items) || data.items.length>20) throw new Error("International news data not approved");
+      const selectedSource=internationalSources[data.source_ids[0]];
       const now=Date.now();
       const fresh=data.items.filter(item=>{
         const published=date(item?.published_at), checked=date(item?.checked_at), reviewed=date(item?.reviewed_at);
-        return item?.published===false && item?.facts_verified===true && item?.source_id==="eurostat-news-releases"
+        return item?.published===false && item?.facts_verified===true && item?.source_id===data.source_ids[0]
+          && item?.publisher===selectedSource.publisher && item?.attribution===selectedSource.attribution
+          && item?.terms_url===selectedSource.termsUrl
           && typeof item.id==="string" && item.id.length<=64
           && typeof item.publisher==="string" && item.publisher.trim() && item.publisher.length<=200
           && typeof item.title==="string" && item.title.trim() && item.title.length<=180
           && typeof item.summary==="string" && item.summary.trim() && item.summary.length<=1000
           && typeof item.attribution==="string" && item.attribution.trim() && item.attribution.length<=250
-          && safeUrl(item.source_url) && safeUrl(item.terms_url) && published && checked && reviewed
+          && safeUrl(item.source_url,selectedSource.hosts) && safeUrl(item.terms_url,selectedSource.hosts) && published && checked && reviewed
           && recentTermsReview(item.terms_checked_on)
           && published.getTime()<=now+5*60*1000 && now-published.getTime()<=7*86400000
           && checked.getTime()<=now+5*60*1000 && now-checked.getTime()<=86400000
@@ -382,27 +389,27 @@
       for(const item of fresh){
         const article=document.createElement("article");article.className="national-news-item";
         const visual=document.createElement("a");visual.className="national-news-visual";
-        visual.href=safeUrl(item.source_url);visual.target="_blank";visual.rel="noopener noreferrer";
-        visual.setAttribute("aria-label","Eurostat-forrás megnyitása: "+item.title);
+        visual.href=safeUrl(item.source_url,selectedSource.hosts);visual.target="_blank";visual.rel="noopener noreferrer";
+        visual.setAttribute("aria-label",item.publisher+"-forrás megnyitása: "+item.title);
         const illustration=document.createElement("img");illustration.src="/assets-v5/news-data.svg?v=20261119-art-detail1";
         illustration.alt="";illustration.loading="lazy";visual.appendChild(illustration);article.appendChild(visual);
         const heading=document.createElement("h3");heading.textContent=item.title;article.appendChild(heading);
         const summary=document.createElement("p");summary.textContent=item.summary;article.appendChild(summary);
         const editorialNote=document.createElement("small");editorialNote.className="news-editorial-note";
-        editorialNote.textContent="Önálló magyar nyelvű tényösszefoglaló az Eurostat adatai alapján; a szövegért a PalócIndex felel, nem az Eurostat.";
+        editorialNote.textContent="Önálló, magyar nyelvű szerkesztői összefoglaló a megjelölt forrás alapján; a szövegért a PalócIndex felel.";
         article.appendChild(editorialNote);
         const meta=document.createElement("div");meta.className="news-meta";
         for(const value of [item.publisher,"Megjelent: "+format(item.published_at),"Ellenőrizve: "+format(item.checked_at),item.attribution]){
           const span=document.createElement("span");span.textContent=value;meta.appendChild(span);
         }
         article.appendChild(meta);
-        const source=document.createElement("a");source.href=safeUrl(item.source_url);source.target="_blank";
-        source.rel="noopener noreferrer";source.textContent="Eurostat-forrás megnyitása ↗";article.appendChild(source);
-        const terms=document.createElement("a");terms.className="news-terms";terms.href=safeUrl(item.terms_url);
+        const source=document.createElement("a");source.href=safeUrl(item.source_url,selectedSource.hosts);source.target="_blank";
+        source.rel="noopener noreferrer";source.textContent=item.publisher+"-forrás megnyitása ↗";article.appendChild(source);
+        const terms=document.createElement("a");terms.className="news-terms";terms.href=safeUrl(item.terms_url,selectedSource.hosts);
         terms.target="_blank";terms.rel="noopener noreferrer";terms.textContent="Felhasználási feltételek ↗";article.appendChild(terms);
         target.appendChild(article);
       }
-      if(fresh.length){placeholder.hidden=true;status.textContent="Kézzel ellenőrzött · Eurostat";}
+      if(fresh.length){placeholder.hidden=true;status.textContent="Kézzel ellenőrzött · "+selectedSource.publisher;}
       else{placeholder.hidden=false;status.textContent="Friss, ellenőrzött nemzetközi hír jelenleg nincs";}
       if(fresh.length){
         const expiresAt=Math.min(...fresh.flatMap(item=>[
@@ -770,6 +777,7 @@
       return Number.isFinite(parsed.getTime())&&parsed.toISOString().slice(0,16).replace(/[-T:]/g,"")===value?parsed:null;
     };
     const format=value=>new Intl.DateTimeFormat("hu-HU",{dateStyle:"medium",timeStyle:"short",timeZone:"Europe/Budapest"}).format(value);
+    let staleObservation=null;
     fetch("/weather-observations.json",{cache:"no-store"}).then(async response=>{
       if(!response.ok)throw new Error("Weather observations unavailable");
       const data=await response.json();
@@ -783,14 +791,16 @@
         ||!Array.isArray(stationRows)||stationRows.length<1||stationRows.length>Object.keys(stationNames).length
         ||!Array.isArray(withheld)||withheld.length>Object.keys(stationNames).length)throw new Error("Weather observations failed validation");
       const seenStations=new Set();
+      const observedTimes=[];
       stationRows.forEach(station=>{
         const observed=parseObservationTime(station?.observed_at);
         if(!exactKeys(station,["station_number","name","observed_at","measurements"])
           ||!Number.isInteger(station.station_number)||station.name!==stationNames[station.station_number]
-          ||seenStations.has(station.station_number)||!observed||observed.getTime()>now+5*60000||now-observed.getTime()>2*3600000
+          ||seenStations.has(station.station_number)||!observed||observed.getTime()>now+5*60000
           ||!Array.isArray(station.measurements)||station.measurements.length<1||station.measurements.length>Object.keys(measurements).length)
           throw new Error("Station observation failed validation");
         seenStations.add(station.station_number);
+        observedTimes.push(observed);
         const codes=new Set();
         station.measurements.forEach(item=>{
           if(!exactKeys(item,["code","label","unit","raw_value"])||typeof item.code!=="string"||!Object.hasOwn(measurements,item.code)
@@ -808,6 +818,11 @@
         withheldIds.add(id);
       });
       if(seenStations.size+withheldIds.size!==Object.keys(stationNames).length)throw new Error("Station list is incomplete");
+      const latestMeasured=new Date(Math.max(...observedTimes.map(value=>value.getTime())));
+      if(observedTimes.some(value=>now-value.getTime()>2*3600000)){
+        staleObservation=latestMeasured;
+        throw new Error("Station observations are stale");
+      }
 
       target.replaceChildren();
       stationRows.forEach(station=>{
@@ -836,11 +851,13 @@
         ...stationRows.map(station=>parseObservationTime(station.observed_at).getTime()+2*3600000))+1;
       scheduleFreshnessExpiry(observationExpiry,()=>{
         target.replaceChildren();sources.replaceChildren();placeholder.hidden=false;badge.textContent="Nincs friss adat";
-        status.textContent="Az állomásmérések lejártak; friss adatot keresünk.";loadWeatherObservations();
+        status.textContent="Az állomásmérések lejártak; friss adatot keresünk. Legutóbbi mérés: "+format(latestMeasured)+".";loadWeatherObservations();
       });
     }).catch(()=>{
       target.replaceChildren();sources.replaceChildren();placeholder.hidden=false;badge.textContent="Nincs friss adat";
-      status.textContent="Nincs elérhető, kellően friss állomásmérés";
+      status.textContent=staleObservation
+        ?"Az állomásadatok nem elég frissek a megjelenítéshez. Legutóbbi mérés: "+format(staleObservation)+". A mérési értékeket nem mutatjuk."
+        :"Nincs elérhető, kellően friss állomásmérés";
     });
   }
   function loadCountyProfile(){
@@ -917,3 +934,4 @@
     loadCountyProfile();
   });
 })();
+
