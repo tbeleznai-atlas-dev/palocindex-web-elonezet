@@ -33,6 +33,7 @@ ROOT_ATTRIBUTE = re.compile(r"(?P<attribute>\b(?:href|src|action|poster)\s*=\s*[
 CSS_URL = re.compile(r"url\(\s*(?P<quote>[\"']?)(?P<url>/(?!/)[^)'\"\s]+)(?P=quote)\s*\)", re.IGNORECASE)
 HTML_REFERENCE = re.compile(r"\b(?:href|src|action|poster)\s*=\s*[\"']([^\"']+)[\"']", re.IGNORECASE)
 JS_REFERENCE = re.compile(r"(?:fetch\(\s*|\.src\s*=\s*)[\"']([^\"']+)[\"']")
+SITEMAP_LOC = re.compile(r"(?P<open><loc>https?://[^/]+/)(?P<path>[^<]*)(?P<close></loc>)", re.IGNORECASE)
 
 
 def _validate_reference(url: str, output: Path, base_path: str, *, optional: set[str] | None = None) -> None:
@@ -55,7 +56,7 @@ def _validate_reference(url: str, output: Path, base_path: str, *, optional: set
 
 
 def _prefixed_url(url: str, base_path: str) -> str:
-    if url == base_path or url.startswith(base_path):
+    if base_path != "/" and (url == base_path or url.startswith(base_path)):
         return url
     path, separator, suffix = url.partition("?")
     fragment = ""
@@ -68,10 +69,22 @@ def _prefixed_url(url: str, base_path: str) -> str:
         relative = path.lstrip("/")
         if relative in PAGE_ROUTES:
             relative += ".html"
-        rewritten = base_path + relative
+        rewritten = ("/" if base_path == "/" else base_path) + relative
     if separator:
         rewritten += "?" + suffix
     return rewritten + fragment
+
+
+def _rewrite_sitemap_routes(text: str) -> str:
+    def rewrite(match: re.Match[str]) -> str:
+        path = match.group("path")
+        route, separator, suffix = path.partition("?")
+        clean_route = route.strip("/")
+        if clean_route in PAGE_ROUTES:
+            route = clean_route + ".html"
+        return match.group("open") + route + ("?" + suffix if separator else "") + match.group("close")
+
+    return SITEMAP_LOC.sub(rewrite, text)
 
 
 def rewrite_root_urls(text: str, base_path: str) -> str:
@@ -143,9 +156,11 @@ def _validate_town_registry(source: Path) -> None:
         raise ValueError("town registry must match the verified 131 towns and 6 districts")
 
 
-def build(source_dir: Path, output_dir: Path, base_path: str) -> dict[str, object]:
-    if not re.fullmatch(r"/[A-Za-z0-9._-]+/", base_path):
+def build(source_dir: Path, output_dir: Path, base_path: str, *, allow_indexing: bool = False) -> dict[str, object]:
+    if base_path != "/" and not re.fullmatch(r"/[A-Za-z0-9._-]+/", base_path):
         raise ValueError("base path must look like /repository-name/")
+    if allow_indexing and base_path != "/":
+        raise ValueError("indexable Pages builds require the root domain path")
     source = source_dir.resolve(strict=True)
     output = output_dir.absolute()
     if output.exists() or output.is_symlink():
@@ -169,9 +184,19 @@ def build(source_dir: Path, output_dir: Path, base_path: str) -> dict[str, objec
                             webmanifest[field] = base_path
                     content = json.dumps(webmanifest, ensure_ascii=False, separators=(",", ":"))
                 raw = content.encode("utf-8")
+            elif source_file.name.casefold() == "sitemap.xml" and base_path == "/":
+                raw = _rewrite_sitemap_routes(raw.decode("utf-8")).encode("utf-8")
             destination.write_bytes(raw)
             hashes[relative.as_posix()] = hashlib.sha256(raw).hexdigest()
-        (output / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+        if allow_indexing:
+            robots = (source / "robots.txt").read_text(encoding="utf-8")
+            if not re.search(r"(?im)^\s*Allow\s*:\s*/\s*$", robots) or re.search(
+                r"(?im)^\s*Disallow\s*:\s*/\s*$", robots
+            ):
+                raise ValueError("robots.txt must explicitly allow indexing")
+        else:
+            robots = "User-agent: *\nDisallow: /\n"
+        (output / "robots.txt").write_text(robots, encoding="utf-8")
         hashes["robots.txt"] = hashlib.sha256((output / "robots.txt").read_bytes()).hexdigest()
         for html_file in output.glob("*.html"):
             for match in HTML_REFERENCE.finditer(html_file.read_text(encoding="utf-8")):
@@ -198,9 +223,10 @@ def main() -> int:
     parser.add_argument("--source-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--base-path", required=True)
+    parser.add_argument("--allow-indexing", action="store_true", help="Preserve explicit root-domain indexing policy")
     args = parser.parse_args()
     try:
-        print(json.dumps(build(args.source_dir, args.output_dir, args.base_path), ensure_ascii=False))
+        print(json.dumps(build(args.source_dir, args.output_dir, args.base_path, allow_indexing=args.allow_indexing), ensure_ascii=False))
     except (OSError, UnicodeError, ValueError) as error:
         print(f"PAGES_BUILD_FAILED: {error}", file=sys.stderr)
         return 1
@@ -209,4 +235,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
