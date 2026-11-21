@@ -7,6 +7,7 @@
     "count_reference": "https://www.ksh.hu/stadat_files/fol/hu/fol0007.html",
     "reference_date": "2026-01-01",
     "verified_town_count": 131,
+    "verified_district_count": 6,
     "verification_scope": "A Nógrád vármegyei településneveket és járásbesorolásokat soronként összevetettük a KSH 2026. január 1-jei hivatalos helységnévtárával; mind a 131 sor egyezett."
   },
   "note": "A településnevek és járásbesorolások a KSH 2026. január 1-jei hivatalos helységnévtárával ellenőrizve. Az önkormányzati honlapcímek, elérhetőségek és hírek külön ellenőrzés nélkül nem jelennek meg hivatalos adatként.",
