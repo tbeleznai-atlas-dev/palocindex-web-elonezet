@@ -106,10 +106,15 @@
       const r=await fetch("/nograd-telepulesek.json");
       if(!r.ok) throw new Error("Town list unavailable");
       const data=await r.json();
+      const expectedTownCount=data?.official_reference?.verified_town_count;
+      const expectedDistrictCount=data?.official_reference?.verified_district_count;
       if(!Array.isArray(data.towns) || !data.towns.length ||
          data.towns.some(t=>!t || typeof t.name!=="string" || !t.name.trim() ||
                             typeof t.district!=="string" || !t.district.trim()) ||
-         new Set(data.towns.map(t=>t.name)).size!==data.towns.length)
+         new Set(data.towns.map(t=>t.name)).size!==data.towns.length ||
+         !Number.isInteger(expectedTownCount) || data.towns.length!==expectedTownCount ||
+         !Number.isInteger(expectedDistrictCount) ||
+         new Set(data.towns.map(t=>t.district)).size!==expectedDistrictCount)
         throw new Error("Invalid town list");
       towns=data.towns;
     }catch(_){
