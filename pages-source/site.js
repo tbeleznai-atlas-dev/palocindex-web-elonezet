@@ -797,7 +797,7 @@
         if(!exactKeys(station,["station_number","name","observed_at","measurements"])
           ||!Number.isInteger(station.station_number)||station.name!==stationNames[station.station_number]
           ||seenStations.has(station.station_number)||!observed||observed.getTime()>now+5*60000
-          ||!Array.isArray(station.measurements)||station.measurements.length<1||station.measurements.length>Object.keys(measurements).length)
+          ||!Array.isArray(station.measurements)||station.measurements.length>Object.keys(measurements).length)
           throw new Error("Station observation failed validation");
         seenStations.add(station.station_number);
         observedTimes.push(observed);
@@ -811,6 +811,7 @@
           codes.add(item.code);
         });
       });
+      if(!stationRows.some(station=>station.measurements.length>0))throw new Error("No supported station measurements");
       const withheldIds=new Set();
       withheld.forEach(id=>{
         if(!Number.isInteger(id)||!Object.hasOwn(stationNames,id)||withheldIds.has(id)||seenStations.has(id))
@@ -832,13 +833,19 @@
         const number=document.createElement("span");number.textContent="Állomás: "+station.station_number;heading.appendChild(number);card.appendChild(heading);
         const time=document.createElement("p");time.className="weather-observation-time";time.textContent="Mérve: "+format(parseObservationTime(station.observed_at));card.appendChild(time);
         const grid=document.createElement("div");grid.className="weather-observation-measurements";
-        station.measurements.forEach(item=>{
-          const measurement=document.createElement("div");measurement.className="weather-observation-measurement";
-          const label=document.createElement("span");label.textContent=item.label;measurement.appendChild(label);
-          const value=document.createElement("strong");value.textContent=item.raw_value.trim()+" "+item.unit;measurement.appendChild(value);
-          grid.appendChild(measurement);
-        });
-        card.appendChild(grid);target.appendChild(card);
+        if(station.measurements.length){
+          station.measurements.forEach(item=>{
+            const measurement=document.createElement("div");measurement.className="weather-observation-measurement";
+            const label=document.createElement("span");label.textContent=item.label;measurement.appendChild(label);
+            const value=document.createElement("strong");value.textContent=item.raw_value.trim()+" "+item.unit;measurement.appendChild(value);
+            grid.appendChild(measurement);
+          });
+          card.appendChild(grid);
+        }else{
+          const empty=document.createElement("p");empty.className="weather-observation-empty";
+          empty.textContent="Ehhez az órához nincs értékelhető mérési adat.";card.appendChild(empty);
+        }
+        target.appendChild(card);
       });
       sources.replaceChildren();
       [[sourceUrl,"Órás állomásadatok"],[metadataUrl,"Állomáslista"],[termsUrl,"Felhasználási feltételek"]].forEach(([url,label])=>{
@@ -846,7 +853,8 @@
       });
       const attributionNode=document.createElement("span");attributionNode.textContent=attribution;sources.appendChild(attributionNode);
       placeholder.hidden=true;badge.textContent="Friss mérések";
-      status.textContent="Frissítve: "+format(checked)+" · "+stationRows.length+" állomás";
+      const measuredStations=stationRows.filter(station=>station.measurements.length>0).length;
+      status.textContent="Frissítve: "+format(checked)+" · van mérési adat "+measuredStations+"/"+Object.keys(stationNames).length+" állomáson";
       const observationExpiry=Math.min(checked.getTime()+24*3600000,
         ...stationRows.map(station=>parseObservationTime(station.observed_at).getTime()+2*3600000))+1;
       scheduleFreshnessExpiry(observationExpiry,()=>{
