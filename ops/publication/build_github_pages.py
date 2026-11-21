@@ -26,6 +26,8 @@ PAGE_ROUTES = {
 }
 MAX_FILES = 100
 MAX_TOTAL_BYTES = 3_000_000
+EXPECTED_TOWN_COUNT = 131
+EXPECTED_DISTRICT_COUNT = 6
 ROOT_URL = re.compile(r"(?P<quote>[\"'])(?P<url>/(?!/)[^\"'\s<>()]+)")
 ROOT_ATTRIBUTE = re.compile(r"(?P<attribute>\b(?:href|src|action|poster)\s*=\s*[\"'])/(\s*[\"'])", re.IGNORECASE)
 CSS_URL = re.compile(r"url\(\s*(?P<quote>[\"']?)(?P<url>/(?!/)[^)'\"\s]+)(?P=quote)\s*\)", re.IGNORECASE)
@@ -110,6 +112,37 @@ def _files(source: Path) -> list[Path]:
     return sorted(result, key=lambda item: item.relative_to(source).as_posix())
 
 
+def _validate_town_registry(source: Path) -> None:
+    try:
+        registry = json.loads((source / "nograd-telepulesek.json").read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as error:
+        raise ValueError("town registry metadata or records are invalid") from error
+    if not isinstance(registry, dict) or not isinstance(registry.get("towns"), list):
+        raise ValueError("town registry metadata or records are invalid")
+    towns = registry["towns"]
+    reference = registry.get("official_reference")
+    if not isinstance(reference, dict) or any(
+        not isinstance(town, dict)
+        or not isinstance(town.get("name"), str)
+        or not town["name"].strip()
+        or not isinstance(town.get("district"), str)
+        or not town["district"].strip()
+        for town in towns
+    ):
+        raise ValueError("town registry metadata or records are invalid")
+    names = [town["name"] for town in towns]
+    districts = {town["district"] for town in towns}
+    if (
+        not isinstance(towns, list)
+        or len(towns) != EXPECTED_TOWN_COUNT
+        or len(set(names)) != EXPECTED_TOWN_COUNT
+        or len(districts) != EXPECTED_DISTRICT_COUNT
+        or reference.get("verified_town_count") != EXPECTED_TOWN_COUNT
+        or reference.get("verified_district_count") != EXPECTED_DISTRICT_COUNT
+    ):
+        raise ValueError("town registry must match the verified 131 towns and 6 districts")
+
+
 def build(source_dir: Path, output_dir: Path, base_path: str) -> dict[str, object]:
     if not re.fullmatch(r"/[A-Za-z0-9._-]+/", base_path):
         raise ValueError("base path must look like /repository-name/")
@@ -118,6 +151,7 @@ def build(source_dir: Path, output_dir: Path, base_path: str) -> dict[str, objec
     if output.exists() or output.is_symlink():
         raise ValueError("output directory already exists")
     files = _files(source)
+    _validate_town_registry(source)
     output.mkdir(parents=True)
     hashes: dict[str, str] = {}
     try:
@@ -175,3 +209,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
