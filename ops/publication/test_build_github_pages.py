@@ -18,9 +18,9 @@ class GitHubPagesBuildTests(unittest.TestCase):
             "robots.txt", "sitemap.xml",
         ):
             (self.source / name).write_text("placeholder", encoding="utf-8")
-        districts = [f"Járás {index}" for index in range(1, 7)]
+        districts = [f"J�r�s {index}" for index in range(1, 7)]
         towns = [
-            {"name": f"Település {index:03d}", "district": districts[(index - 1) % len(districts)]}
+            {"name": f"Telep�l�s {index:03d}", "district": districts[(index - 1) % len(districts)]}
             for index in range(1, 132)
         ]
         (self.source / "nograd-telepulesek.json").write_text(json.dumps({
@@ -28,9 +28,9 @@ class GitHubPagesBuildTests(unittest.TestCase):
             "towns": towns,
         }, ensure_ascii=False), encoding="utf-8")
         (self.source / "index.html").write_text(
-            '<link href="/v9.css"><a href="/">Kezdőlap</a>'
-            '<a href="/hirdetesek#feltetelek">Hirdetés</a>'
-            '<a href="/#idojaras">Időjárás</a><img src="/assets-v5/card.svg">',
+            '<link href="/v9.css"><a href="/">Kezd�lap</a>'
+            '<a href="/hirdetesek#feltetelek">Hirdet�s</a>'
+            '<a href="/#idojaras">Id�j�r�s</a><img src="/assets-v5/card.svg">',
             encoding="utf-8",
         )
         (self.source / "site.js").write_text(
@@ -62,6 +62,7 @@ class GitHubPagesBuildTests(unittest.TestCase):
         result = build(self.source, output, "/palocindex-web-elonezet/")
 
         html = (output / "index.html").read_text(encoding="utf-8")
+        self.assertRegex(html, r'<meta\s+name="robots"\s+content="noindex,\s*nofollow">')
         self.assertIn('href="/palocindex-web-elonezet/v9.css"', html)
         self.assertIn('href="/palocindex-web-elonezet/"', html)
         self.assertIn('href="/palocindex-web-elonezet/hirdetesek.html#feltetelek"', html)
@@ -121,6 +122,8 @@ class GitHubPagesBuildTests(unittest.TestCase):
         build(self.source, output, "/", allow_indexing=True)
 
         self.assertEqual((output / "robots.txt").read_text(encoding="utf-8"), robots)
+        self.assertNotRegex((output / "index.html").read_text(encoding="utf-8"),
+                            r'<meta\s+name="robots"\s+content="noindex')
 
     def test_indexing_requires_an_explicit_allow_all_robots_rule(self):
         output = self.root / "blocked-indexing-artifact"
@@ -137,4 +140,3 @@ class GitHubPagesBuildTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

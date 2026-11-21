@@ -87,6 +87,18 @@ def _rewrite_sitemap_routes(text: str) -> str:
     return SITEMAP_LOC.sub(rewrite, text)
 
 
+def _set_noindex_meta(html: str) -> str:
+    """Keep preview builds out of search results even when crawlers can reach them."""
+    meta = '<meta name="robots" content="noindex,nofollow">'
+    pattern = re.compile(r'<meta\s+name=["\']robots["\'][^>]*>', re.IGNORECASE)
+    if pattern.search(html):
+        return pattern.sub(meta, html, count=1)
+    head = re.search(r"<head(?:\s[^>]*)?>", html, re.IGNORECASE)
+    if head:
+        return html[:head.end()] + "\n" + meta + html[head.end():]
+    return meta + "\n" + html
+
+
 def rewrite_root_urls(text: str, base_path: str) -> str:
     """Prefix root-relative links, assets, and fetch paths for a project site."""
     text = ROOT_ATTRIBUTE.sub(lambda match: match.group("attribute") + base_path + match.group(2), text)
@@ -185,6 +197,8 @@ def build(source_dir: Path, output_dir: Path, base_path: str, *, allow_indexing:
             raw = source_file.read_bytes()
             if source_file.suffix.casefold() in {".html", ".js", ".css", ".webmanifest"}:
                 content = rewrite_root_urls(raw.decode("utf-8"), base_path)
+                if source_file.name.casefold() == "index.html" and not allow_indexing:
+                    content = _set_noindex_meta(content)
                 if source_file.suffix.casefold() == ".webmanifest":
                     webmanifest = json.loads(content)
                     for field in ("start_url", "scope"):
@@ -247,4 +261,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
