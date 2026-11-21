@@ -390,6 +390,12 @@
         "status": "suspicious_external_links",
         "note": "A honlap biztonsági ellenőrzés alatt áll, ezért a hivatkozás egyelőre nem nyitható meg."
       },
+      "official_contact_page": {
+        "url": "https://www.csecse.hu/index.php/kapcsolat",
+        "label": "Csécse Község Önkormányzata · kapcsolat",
+        "source": "https://www.csecse.hu/dokumentumok/Adatkezelesi/Adatkezelesi.pdf",
+        "checked_on": "2026-11-21"
+      },
       "official_registry": {
         "url": "https://kozadat.hu/kereso/kozfeladatot-ellato-szervek/adatlap/6774",
         "label": "Csécse Község Önkormányzata – adatlap a Közadatkeresőben ↗",
@@ -415,6 +421,12 @@
         "checked_on": "2026-11-16",
         "status": "suspicious_external_links",
         "note": "A honlap biztonsági ellenőrzés alatt áll, ezért a hivatkozás egyelőre nem nyitható meg."
+      },
+      "official_contact_page": {
+        "url": "https://www.ecseg.hu/index.php/kapcsolat",
+        "label": "Ecseg Polgármesteri Hivatal · elérhetőség",
+        "source": "https://njt.jog.gov.hu/jogszabaly/2024-11-SP-5Y520",
+        "checked_on": "2026-11-21"
       },
       "official_registry": {
         "url": "https://kozadat.hu/kereso/kozfeladatot-ellato-szervek/adatlap/1061",
