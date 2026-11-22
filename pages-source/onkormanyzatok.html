@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d5d55">
+<meta name="description" content="Válassz a Nógrád vármegyei települések közül a PalócIndex közösségi portálon.">
+<title>Önkormányzatok | PalócIndex</title>
+<link rel="canonical" href="https://palocindex.hu/onkormanyzatok">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PalócIndex">
+<meta property="og:title" content="Önkormányzatok | PalócIndex">
+<meta property="og:description" content="Válassz a Nógrád vármegyei települések közül a PalócIndex közösségi portálon.">
+<meta property="og:url" content="https://palocindex.hu/onkormanyzatok">
+<meta property="og:image" content="https://palocindex.hu/assets-v5/hero.jpg">
+<meta name="twitter:image" content="https://palocindex.hu/assets-v5/hero.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/paloc-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/v9.css?v=20261120-town-radio">
+<script src="/site.js?v=20261120-town-radio" defer></script>
+</head>
+<body class="v9-standalone">
+<a class="v9-skip" href="#tartalom">Ugrás a tartalomra</a>
+<div class="v9-announcement">⚠️ <strong>Bemutató oldal.</strong> A rovatok minták; beküldés és üzenetküldés nincs.</div>
+<header class="v9-header"><div class="v9-header-inner">
+<a class="v9-brand" href="/"><img src="/paloc-icon.svg" alt="PalócIndex ikon"><span>Palóc<em>Index</em></span></a>
+<div class="v9-tagline">Helyben.<br>Egymásért.<br>Közösen!</div>
+</div></header>
+<nav class="v9-nav" aria-label="Fő navigáció"><div class="v9-nav-inner"><a href="/">Kezdőlap</a><a href="/onkormanyzatok" aria-current="page">Önkormányzatok</a><a href="/hirdetesek">Hirdetések</a><a href="/kerdesek">Kérdések</a><a href="/#idojaras">Időjárás</a><a href="/#kozlekedes">Közlekedés</a><a href="/#tippek">Háztartás és kert</a><a href="/#telepites">Telefonos útmutató</a></div></nav>
+<main id="tartalom" tabindex="-1">
+<section class="v9-hero"><div class="v9-wrap"><span class="v9-chip"><span>🏘️&nbsp;<span id="all-towns-counter">131</span>&nbsp;település · <span id="district-counter">6</span>&nbsp;járás</span></span>
+<h1>Találd meg a településedet!</h1>
+<p>Településenként szervezett, közérthető önkormányzati információk és helyi tudnivalók. Jelenleg forrással alátámasztott önkormányzati honlap-hivatkozást <strong><span id="official-website-count">—</span></strong> településnél jelenítünk meg; további <strong><span id="official-website-pending-count">—</span></strong> településnél a hivatkozás még nem jeleníthető meg biztonságosan. A feltüntetett forrás a cím településhez rendelését támasztja alá, a külső oldal pillanatnyi elérhetőségét nem garantálja. A helyi hírek feltöltése is folyamatban van.</p>
+<div class="v9-actions"><a class="v9-btn" href="#telepules-valaszto">Település kiválasztása ↓</a><a class="v9-btn alt" href="/kerdesek">Kérdezz tőlünk</a></div></div></section>
+<section class="v9-section" id="telepules-valaszto"><div class="v9-wrap"><h2 class="v9-heading">Önkormányzatok település szerint</h2>
+<p class="v9-lead">A Nógrád vármegyei listában kereshetsz név és járás alapján. Egy kattintással kiválaszthatod a faludat vagy városodat.</p>
+<div class="v9-selectrow"><div class="v9-field"><label for="town-query">Település keresése</label><input id="town-query" type="search" enterkeyhint="search" autocapitalize="off" spellcheck="false" placeholder="Például: Endrefalva, Szécsény, Salgótarján" autocomplete="off"></div>
+<div class="v9-field"><label for="district-filter">Járás</label><select id="district-filter" aria-label="Szűrés járás szerint"></select></div></div>
+<p id="municipalities-status" class="v9-result" role="status">Települések betöltése…</p>
+<noscript><style>#municipalities-status,.v9-selectrow{display:none}</style><p class="v9-info">A településkereső használatához engedélyezd a JavaScriptet a böngésződben. Addig a <a href="https://www.ksh.hu/apps/hntr.main" target="_blank" rel="noopener noreferrer">KSH hivatalos helységnévtárában</a> kereshetsz.</p></noscript>
+<button type="button" id="town-retry" class="v9-btn outline" hidden>Településlista újratöltése</button>
+<button type="button" id="town-filters-reset" class="v9-btn outline" hidden>Szűrők törlése</button>
+<div class="v9-detail" id="municipality-detail" hidden><span class="v9-chip">Kiválasztott település</span>
+<h3 id="municipality-title" tabindex="-1"></h3><strong id="municipality-district"></strong>
+<p id="municipality-info"></p>
+<p id="municipality-official-info" hidden><a id="municipality-official-link" target="_blank" rel="noopener noreferrer">Önkormányzat hivatalos honlapja ↗</a><br><small>Ellenőrzés: <span id="municipality-official-date"></span> · <a id="municipality-official-source" target="_blank" rel="noopener noreferrer">Ellenőrzés forrása</a></small></p>
+<p id="municipality-contact-info" hidden><a id="municipality-contact-link" target="_blank" rel="noopener noreferrer"></a><br><small>Ez a közös hivatali tájékoztató nem a település általános honlapja. Ellenőrizve: <span id="municipality-contact-date"></span>.</small></p>
+<p id="municipality-registry-info" hidden><a id="municipality-registry-link" target="_blank" rel="noopener noreferrer"></a><br><small>Ez külső közadat-nyilvántartási adatlap, nem az önkormányzat honlapja; a nyilvántartás adatai változhatnak. Ellenőriztük: <span id="municipality-registry-date"></span> · <a id="municipality-registry-source" target="_blank" rel="noopener noreferrer">a nyilvántartás működtetője</a></small></p>
+<p class="v9-help">Ez nem hivatalos önkormányzati adatlap. Ha sürgős, a hivatalos forrásból ellenőrizd az ügyfélfogadást.</p>
+ <div class="v9-actions"><a id="municipality-search-google" class="v9-btn dark" target="_blank" rel="noopener noreferrer" href="https://www.google.com/">Keresés Google-lel ↗</a><a id="municipality-search-bing" class="v9-btn alt" target="_blank" rel="noopener noreferrer" href="https://www.bing.com/">Keresés Binggel ↗</a>
+<a class="v9-btn outline" href="/kerdesek">Jelenleg nem fogadunk beküldést</a></div></div>
+<div id="municipality-cards" class="v9-towns" role="radiogroup" aria-label="Település kiválasztása"></div>
+<div class="v9-info" style="margin-top:20px"><strong>Adatforrás és ellenőrzés:</strong> mind a 131 település nevét és járásbesorolását soronként összevetettük a <a href="https://www.ksh.hu/docs/helysegnevtar/hnt_letoltes_2026.xlsx" target="_blank" rel="noopener noreferrer">KSH 2026. január 1-jei hivatalos helységnévtárával</a>; mindegyik sor egyezett. A településszám a <a href="https://www.ksh.hu/stadat_files/fol/hu/fol0007.html" target="_blank" rel="noopener noreferrer">KSH hivatalos statisztikájával</a> is egyezik. Ellenőrizve: 2026. november 16. Egyes településeknél a hivatalos honlapot külön forrással és ellenőrzési dátummal is megadjuk. Az elérhetőségek és hírek külön ellenőrzés nélkül nem jelennek meg hivatalos adatként. A <a href="https://www.ksh.hu/apps/hntr.main" target="_blank" rel="noopener noreferrer">KSH Helységnévtár</a> az irányadó forrás.</div>
+
+</div></section>
+<section class="v9-section soft"><div class="v9-wrap"><h2 class="v9-heading">Milyen információkat tervezünk?</h2><div class="v9-grid">
+<article class="v9-card accent"><h3>📋 Hivatali ügyintézés</h3><p>Ügyfélfogadás, elérhetőségek, ügytípusok, közlemények — csak ellenőrzött forrásból.</p></article>
+<article class="v9-card sky"><h3>📣 Falusi hírek és események</h3><p>Helyi programok, felhívások, közösségi kezdeményezések, megjelölt forrással.</p></article>
+<article class="v9-card amber"><h3>🤝 Hasznos helyi segítség</h3><p>Szolgáltatók, segítő kezdeményezések, közlekedés és az időjárási tájékozódás forrásai.</p></article>
+</div><p class="v9-info" style="margin-top:22px">Az ellenőrzött önkormányzati honlapokat a kiválasztott településnél jelöljük. Más településeknél kereséssel tájékozódhatsz; az elérhetőségek és hírek ellenőrzése folyamatban van.</p></div></section>
+</main>
+<footer class="v9-footer"><div class="v9-wrap v9-footer-inner"><p><strong>PalócIndex</strong> — Helyi információk, emberek, segítség és lehetőségek.<br>Az oldal próbaüzemi, nem hivatalos önkormányzati híroldal. A hirdetési beküldés még nem érhető el.</p><div class="v9-footer-links"><a href="/adatkezeles">Adatkezelés</a><a href="/kerdesek">Kapcsolat</a><a href="/hirdetesek">Hirdetések</a></div></div></footer>
+</body></html>

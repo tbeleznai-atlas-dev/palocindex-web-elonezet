@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" role="img" aria-labelledby="title">
+<title id="title">Közösségi összejövetel a nógrádi faluház udvarán</title>
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b9ddea"/><stop offset="1" stop-color="#f6e5c1"/></linearGradient>
+<linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a6cf91"/><stop offset="1" stop-color="#5d9676"/></linearGradient>
+<linearGradient id="stage" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#71649b"/><stop offset="1" stop-color="#343e69"/></linearGradient>
+<linearGradient id="curtain" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efa07d"/><stop offset="1" stop-color="#b95567"/></linearGradient>
+<linearGradient id="awning" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5c776"/><stop offset="1" stop-color="#dc765f"/></linearGradient>
+<linearGradient id="hills" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7c9ba5"/><stop offset="1" stop-color="#88ae87"/></linearGradient>
+<linearGradient id="canopy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a85258"/><stop offset=".5" stop-color="#e08267"/><stop offset="1" stop-color="#f0bd77"/></linearGradient>
+</defs>
+<rect width="160" height="100" fill="url(#sky)"/>
+<path d="M7 38q9-10 18 0 8-7 16 0" fill="none" stroke="#fff9e8" stroke-width="3" stroke-linecap="round"/>
+<circle cx="144" cy="15" r="8" fill="#ffd46e"/><path d="M144 3v3m0 18v3m-12-12h3m18 0h3" stroke="#f1b65b" stroke-width="1.4"/>
+
+<g stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 69Q35 54 72 70T160 66V100H0Z" fill="url(#ground)"/><path d="M4 82q30-18 60 0t58 0 38-2" fill="none" stroke="#c8dda0" stroke-width="2"/><path d="M8 91h144" stroke="#6c9b70" stroke-width="2"/>
+<path d="M13 46l24-20 24 20v31H13z" fill="#e9c27d" stroke="#9b785d" stroke-width="1.5"/><path d="M9 47l28-25 28 25" fill="#a35f50" stroke="#7f534c" stroke-width="2"/><path d="M31 54h13v23H31z" fill="#78a2ad"/><path d="M17 53h8v8h-8zm31 0h8v8h-8z" fill="#e9f0dd"/><path d="M32 62v15" stroke="#f7e8bc" stroke-width="1.5"/>
+<path d="M93 54l22-18 22 18v23H93z" fill="#c5d9cf" stroke="#738f81" stroke-width="1.5"/><path d="M89 55l26-23 26 23" fill="#647f9a" stroke="#506b80" stroke-width="2"/><path d="M110 59h11v18h-11z" fill="#dfaa69"/><path d="M99 58h7v7h-7zm22 0h7v7h-7z" fill="#f8edca"/>
+<path d="M73 46v31m-8-19h16m-14-8 6-6 6 6" stroke="#875d50" stroke-width="2"/><path d="M68 44q5-10 10 0" fill="#75ad7a"/><path d="M70 49q-8-8-8-1m18 1q8-8 8-1" fill="#8abf79"/>
+<circle cx="75" cy="61" r="4" fill="#bd7962"/><path d="M70 66h10v10H70z" fill="#c86d69"/><circle cx="86" cy="63" r="4" fill="#d49a74"/><path d="M81 68h10v8H81z" fill="#6f9dac"/><circle cx="62" cy="64" r="4" fill="#bf8268"/><path d="M57 69h10v7H57z" fill="#e2c168"/>
+<path d="M10 80h142" stroke="#856d50" stroke-width="2"/><circle cx="16" cy="17" r="8" fill="#ffd46d"/><path d="M16 4v3m0 20v3M3 17h3m20 0h3" stroke="#f3b762" stroke-width="1.5"/><circle cx="82" cy="15" r="2" fill="#f2ba5e"/><circle cx="91" cy="21" r="2" fill="#f2ba5e"/><circle cx="74" cy="20" r="2" fill="#f2ba5e"/>
+<path d="M21 76q5-8 10 0m105 0q5-8 10 0" fill="none" stroke="#456c54" stroke-width="2"/><circle cx="25" cy="74" r="5" fill="#6caa70"/><circle cx="140" cy="74" r="5" fill="#6caa70"/>
+</g>
+<g aria-hidden="true" opacity=".95" stroke-linecap="round" stroke-linejoin="round"><path d="M10 96v-9m0 5-4-4m4 2 4-4M149 96v-9m0 5-4-4m4 2 4-4M80 96v-7m0 4-3-3m3 2 3-3" fill="none" stroke="#41795b" stroke-width="1.6"/><circle cx="10" cy="85" r="2.4" fill="#ffd46e" stroke="#fff1c4"/><circle cx="149" cy="85" r="2.4" fill="#e78572" stroke="#ffe6bf"/><circle cx="80" cy="87" r="2" fill="#f0c266" stroke="#fff1c4"/><circle cx="5" cy="97" r="1.1" fill="#f4d27a"/><circle cx="25" cy="97" r="1.1" fill="#f4d27a"/><circle cx="135" cy="97" r="1.1" fill="#f4d27a"/><circle cx="155" cy="97" r="1.1" fill="#f4d27a"/></g>
+</svg>

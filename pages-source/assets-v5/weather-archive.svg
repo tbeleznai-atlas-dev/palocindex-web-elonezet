@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Regionális időjárási archívum</title>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#126886"/><stop offset="1" stop-color="#37ae9b"/></linearGradient></defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg)"/><circle cx="522" cy="73" r="96" fill="#fff" opacity=".08"/>
+  <rect x="150" y="48" width="340" height="268" rx="24" fill="#f8fcff"/><path d="M150 74q0-26 24-26h292q24 0 24 26v42H150z" fill="#dceff5"/>
+  <path d="M207 40v42M433 40v42" stroke="#276f83" stroke-width="12" stroke-linecap="round"/><text x="184" y="106" fill="#28677b" font-family="system-ui,sans-serif" font-size="24" font-weight="800">NÓGRÁD · ARCHÍVUM</text>
+  <path d="M190 151h260M190 194h260M190 237h260M190 280h260" stroke="#dce8ed" stroke-width="8" stroke-linecap="round"/><path d="m198 226 59-25 57 10 59-45 72 15" fill="none" stroke="#e69a43" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="257" cy="201" r="8" fill="#e69a43"/><circle cx="314" cy="211" r="8" fill="#e69a43"/><circle cx="373" cy="166" r="8" fill="#e69a43"/><circle cx="445" cy="181" r="8" fill="#e69a43"/>
+</svg>

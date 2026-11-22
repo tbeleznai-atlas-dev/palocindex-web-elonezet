@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" role="img" aria-labelledby="title">
+  <title id="title">Kanyargó út a nógrádi dombok között</title>
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#9de3ee"/><stop offset="1" stop-color="#eff7d8"/></linearGradient><linearGradient id="hills" x2="0" y2="1"><stop stop-color="#83c990"/><stop offset="1" stop-color="#367d67"/></linearGradient></defs>
+  <rect width="240" height="140" rx="18" fill="url(#sky)"/>
+  <path d="M0 103 46 61l34 31 46-49 54 60 31-32 29 24v45H0z" fill="url(#hills)"/>
+  <path d="M91 140q37-43 15-71-12-15 11-34l16 10q-20 18-4 33 28 30-16 62z" fill="#f7f0d7"/>
+  <path d="M110 140q25-36 8-60-13-19 5-38" fill="none" stroke="#7b7b72" stroke-width="3" stroke-dasharray="7 7"/>
+  <g transform="translate(70 92)"><rect x="0" y="5" width="42" height="18" rx="7" fill="#f36d4e"/><path d="m9 5 7-9h13l8 9" fill="#f9b45d"/><circle cx="10" cy="25" r="5" fill="#26445a"/><circle cx="33" cy="25" r="5" fill="#26445a"/><rect x="5" y="10" width="9" height="6" rx="2" fill="#d8f2f7"/><rect x="18" y="10" width="9" height="6" rx="2" fill="#d8f2f7"/></g>
+  <path d="M0 98q28-14 55 0m127-2q27-15 58 0" fill="none" stroke="#c3dcaa" stroke-width="2" opacity=".8"/>
+  <g fill="#1d5e49"><path d="M13 104q-3-20 8-27 11 8 8 27z"/><path d="M216 105q-3-17 7-24 10 7 8 24z"/></g>
+  <g stroke="#efe4c4" stroke-width="2"><path d="M107 119v8M118 117v10M130 113v14M143 109v18M157 105v22"/></g>
+  <path d="M94 140q28-22 54-2m-91-3 14-7m-46 18 18-8" fill="none" stroke="#f6e3aa" stroke-width="2" opacity=".7"/>
+  <g transform="translate(183 56)"><path d="M8 36V3" stroke="#f5efd9" stroke-width="3"/><path d="M8 4 27 11v19L8 24z" fill="#f5d45d" stroke="#fff5d3" stroke-width="2"/><path d="M15 11v8" stroke="#315e6c" stroke-width="2"/></g>
+  <g fill="#e6f2cf" opacity=".72"><circle cx="26" cy="72" r="2"/><circle cx="39" cy="81" r="1.5"/><circle cx="198" cy="75" r="2"/><circle cx="207" cy="83" r="1.5"/></g>
+  <path d="M4 132q24-7 45 0m145-5q21-8 42-1" fill="none" stroke="#4e8d67" stroke-width="2" opacity=".65"/>
+  <g fill="#fff9e9" opacity=".92"><ellipse cx="34" cy="22" rx="13" ry="5"/><ellipse cx="43" cy="20" rx="9" ry="7"/><ellipse cx="52" cy="23" rx="12" ry="5"/></g>
+  <path d="M69 28q5-5 10 0m8-5q4-4 8 0" fill="none" stroke="#fffdf0" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#f5edcf" stroke="#648b78" stroke-width="1"><path d="M31 82V70l9-7 10 7v13z"/><path d="M45 85V75l8-6 9 6v10z"/></g><g fill="#6994a0"><rect x="36" y="73" width="4" height="5"/><rect x="51" y="77" width="4" height="5"/></g>
+  <g fill="#27654f"><path d="M10 107 18 87l8 20z"/><path d="M201 105 211 80l10 25z"/></g><g stroke="#c9dfae" stroke-width="2"><path d="M14 100h8M12 96h12M205 98h12M207 93h8"/></g>
+  <path d="M112 127h5m11-8h5m10-8h5" stroke="#fff9e8" stroke-width="2" stroke-linecap="round"/>
+</svg>

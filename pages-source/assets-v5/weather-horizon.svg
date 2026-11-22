@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Hosszú távú időjárási kilátás</title>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#5961a8"/><stop offset="1" stop-color="#df8a60"/></linearGradient></defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg)"/><circle cx="468" cy="123" r="58" fill="#ffe3a1"/>
+  <path d="M0 238q93-72 184 0t184 0 184 0 184 0v122H0z" fill="#dcecf2" opacity=".95"/><path d="M0 277q83-48 166 0t166 0 166 0 166 0 166 0v83H0z" fill="#6f9fc0"/>
+  <path d="M113 230v-40m58 40v-60m58 60v-48m58 48v-77m58 77v-56m58 56v-66" stroke="#fff" stroke-width="14" stroke-linecap="round" opacity=".9"/>
+  <path d="M95 303h449" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".72"/><circle cx="115" cy="303" r="10" fill="#ffd16f"/><circle cx="224" cy="303" r="10" fill="#ffd16f"/><circle cx="333" cy="303" r="10" fill="#ffd16f"/><circle cx="442" cy="303" r="10" fill="#ffd16f"/><circle cx="542" cy="303" r="10" fill="#ffd16f"/>
+</svg>

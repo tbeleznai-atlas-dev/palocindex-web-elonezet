@@ -1,0 +1,23 @@
+{
+  "name": "PalócIndex – Helyben, egymásért",
+  "short_name": "PalócIndex",
+  "description": "Palócföld helyi közösségi weboldala – fejlesztés alatt",
+  "lang": "hu",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#073756",
+  "theme_color": "#073756",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+name: Validate and publish PalócIndex
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: palocindex-pages
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Test Pages packaging and domain gate
+        run: >-
+          python -m unittest
+          ops.publication.test_build_github_pages
+          ops.publication.test_sync_github_pages_source
+          ops.publication.test_pages_workflow
+      - name: Validate the root-domain artifact
+        run: >-
+          python ops/publication/build_github_pages.py
+          --source-dir pages-source
+          --output-dir tmp/pages-preflight
+          --base-path /
+          --allow-indexing
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Select preview or custom-domain build
+        id: mode
+        env:
+          CUSTOM_DOMAIN_READY: ${{ vars.PALOCINDEX_CUSTOM_DOMAIN_READY }}
+        run: |
+          if [[ "$CUSTOM_DOMAIN_READY" == "true" ]]; then
+            echo "base_path=/" >> "$GITHUB_OUTPUT"
+            echo "indexing_flag=--allow-indexing" >> "$GITHUB_OUTPUT"
+          else
+            echo "base_path=/palocindex-web-elonezet/" >> "$GITHUB_OUTPUT"
+            echo "indexing_flag=" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Build the public static files
+        run: >-
+          python ops/publication/build_github_pages.py
+          --source-dir pages-source
+          --output-dir pages-artifact
+          --base-path "${{ steps.mode.outputs.base_path }}"
+          ${{ steps.mode.outputs.indexing_flag }}
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: pages-artifact
+      - name: Deploy PalócIndex
+        id: deployment
+        uses: actions/deploy-pages@v4
+

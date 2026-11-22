@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" role="img" aria-labelledby="title">
+<title id="title">Színes falunapi vásár lampionokkal, standokkal és portékákkal</title>
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b9ddea"/><stop offset="1" stop-color="#f6e5c1"/></linearGradient>
+<linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a6cf91"/><stop offset="1" stop-color="#5d9676"/></linearGradient>
+<linearGradient id="stage" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#71649b"/><stop offset="1" stop-color="#343e69"/></linearGradient>
+<linearGradient id="curtain" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efa07d"/><stop offset="1" stop-color="#b95567"/></linearGradient>
+<linearGradient id="awning" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5c776"/><stop offset="1" stop-color="#dc765f"/></linearGradient>
+<linearGradient id="hills" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7c9ba5"/><stop offset="1" stop-color="#88ae87"/></linearGradient>
+<linearGradient id="canopy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a85258"/><stop offset=".5" stop-color="#e08267"/><stop offset="1" stop-color="#f0bd77"/></linearGradient>
+</defs>
+<rect width="160" height="100" fill="url(#sky)"/>
+<path d="M7 38q9-10 18 0 8-7 16 0" fill="none" stroke="#fff9e8" stroke-width="3" stroke-linecap="round"/>
+<circle cx="144" cy="15" r="8" fill="#ffd46e"/><path d="M144 3v3m0 18v3m-12-12h3m18 0h3" stroke="#f1b65b" stroke-width="1.4"/>
+
+<g stroke-linecap="round" stroke-linejoin="round">
+<path d="M7 74 Q39 61 77 74 T153 70 V100 H7Z" fill="url(#ground)"/><path d="M8 83 Q42 68 80 82 T153 78" fill="none" stroke="#5e9a72" stroke-width="2"/><path d="M13 88 Q45 74 73 88 M88 88 Q119 73 151 86" fill="none" stroke="#d7e6a1" stroke-width="2"/>
+<path d="M19 27 L145 27" stroke="#845073" stroke-width="2"/><path d="M28 28 l5 13 5-13 M50 28 l5 13 5-13 M72 28 l5 13 5-13 M94 28 l5 13 5-13 M116 28 l5 13 5-13 M137 28 l5 13 5-13" fill="#f49a75" stroke="#d27069" stroke-width="1"/>
+<path d="M38 47 L48 37 H112 L124 47 Z" fill="url(#awning)" stroke="#a75345" stroke-width="1.5"/><path d="M42 47h78v28H42z" fill="#d88353" stroke="#9e604d" stroke-width="1.5"/><path d="M42 47h78v8H42z" fill="#f4d187"/><path d="M50 47v8m13-8v8m13-8v8m13-8v8m13-8v8m13-8v8" stroke="#fff0c6" stroke-width="3"/>
+<path d="M47 75V56h26v19m9 0V56h31v19" fill="#f6dfaa" stroke="#936044" stroke-width="2"/><path d="M52 61h16m-16 5h16m18-5h19m-19 5h19" stroke="#be6b4b" stroke-width="2"/>
+<rect x="15" y="59" width="23" height="15" rx="2" fill="#d9a862" stroke="#95684b"/><path d="M13 59h27l-4-8H18z" fill="#79b88b" stroke="#548262"/><circle cx="20" cy="56" r="2" fill="#efce65"/><circle cx="28" cy="55" r="2" fill="#da776b"/><circle cx="35" cy="56" r="2" fill="#f0d98e"/>
+<circle cx="129" cy="55" r="4" fill="#b9755d"/><path d="M123 60q6-4 12 0v14h-12z" fill="#4f95a0"/><path d="M125 74l-3 9m9-9 3 9" stroke="#65526e" stroke-width="3"/><circle cx="31" cy="46" r="3.5" fill="#bf775c"/><path d="M26 51q5-4 10 0v12H26z" fill="#637fb0"/>
+<path d="M5 94h150" stroke="#80644c" stroke-width="2"/><circle cx="89" cy="16" r="8" fill="#ffd36d"/><path d="M89 3v3m0 20v3m-13-13h3m20 0h3m-22-9 2 2m14 14 2 2m0-18-2 2m-14 14-2 2" stroke="#f3b85c" stroke-width="1.5"/>
+</g>
+<g aria-hidden="true" opacity=".95" stroke-linecap="round" stroke-linejoin="round"><path d="M10 96v-9m0 5-4-4m4 2 4-4M149 96v-9m0 5-4-4m4 2 4-4M80 96v-7m0 4-3-3m3 2 3-3" fill="none" stroke="#41795b" stroke-width="1.6"/><circle cx="10" cy="85" r="2.4" fill="#ffd46e" stroke="#fff1c4"/><circle cx="149" cy="85" r="2.4" fill="#e78572" stroke="#ffe6bf"/><circle cx="80" cy="87" r="2" fill="#f0c266" stroke="#fff1c4"/><circle cx="5" cy="97" r="1.1" fill="#f4d27a"/><circle cx="25" cy="97" r="1.1" fill="#f4d27a"/><circle cx="135" cy="97" r="1.1" fill="#f4d27a"/><circle cx="155" cy="97" r="1.1" fill="#f4d27a"/></g>
+</svg>

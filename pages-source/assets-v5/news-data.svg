@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img">
+  <title id="title">Hír és ellenőrzött statisztikai adat</title>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0d4770"/><stop offset="1" stop-color="#1c91a2"/></linearGradient></defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg)"/>
+  <circle cx="525" cy="70" r="92" fill="#fff" opacity=".08"/>
+  <rect x="132" y="58" width="376" height="246" rx="18" fill="#f7fbff"/>
+  <path d="M166 98h174M166 124h116" stroke="#9fb8ca" stroke-width="10" stroke-linecap="round"/>
+  <path d="M166 270v-54h49v54m18 0v-95h49v95m18 0v-128h49v128m18 0v-78h49v78" fill="#f1a23a"/>
+  <path d="M159 278h332" stroke="#20455c" stroke-width="8" stroke-linecap="round"/>
+  <path d="m385 159 35 27 45-57" fill="none" stroke="#19a978" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M157 152h325M157 185h325M157 219h325" stroke="#dce7ee" stroke-width="3" stroke-dasharray="5 9"/><path d="M177 254v-36h27v36m36 0v-78h27v78m36 0v-108h27v108m36 0v-61h27v61m36 0v-91h27v91" fill="none" stroke="#d47e2c" stroke-width="4" opacity=".5"/><circle cx="486" cy="98" r="8" fill="#e9ad4f"/><path d="M482 98h8m-4-4v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M164 70h60" stroke="#78a9b5" stroke-width="7" stroke-linecap="round"/>
+<defs><linearGradient id="editorial-accent" x2="1" y2="1"><stop stop-color="#fff4d0"/><stop offset="1" stop-color="#85c9a2"/></linearGradient></defs>
+<circle cx="459" cy="100" r="4" fill="#bd5d78"/><circle cx="477" cy="100" r="4" fill="#55a98a"/><path d="M180 144h38m18 0h54m18 0h38" stroke="#c7d7e1" stroke-width="5" stroke-linecap="round"/><path d="M425 237v16m17-31v31m17-45v45" stroke="#e8b260" stroke-width="5" stroke-linecap="round"/><path d="M160 292h320" stroke="#98b3c1" stroke-width="3" stroke-dasharray="3 9"/>
+<circle cx="204" cy="218" r="4" fill="#efad4c"/><circle cx="231" cy="176" r="4" fill="#efad4c"/>
+</svg>
