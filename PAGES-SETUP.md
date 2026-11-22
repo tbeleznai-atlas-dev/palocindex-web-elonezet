@@ -2,13 +2,18 @@
 
 Ez a tárhelyváltás a nyilvános statikus PalócIndex oldalt GitHub Pages-en szolgálja ki. A Rackhostnál látható tárhelycsomag befizetése nem része ennek az útvonalnak. A Sites jelenlegi `palocindex.hu` kiadása a DNS átállításáig változatlanul működik.
 
-## Egyszeri beállítás a kiadási PR összeolvasztása után
+## Első megtekintés a kiadási PR összeolvasztása után
 
-1. A GitHub tárban nyisd meg a **Settings → Pages** oldalt, és a **Build and deployment → Source** mezőnél válaszd a **GitHub Actions** lehetőséget.
-2. A **Custom domain** mezőbe írd be: `palocindex.hu`, majd mentsd el. A GitHub által kért domain-ellenőrző TXT rekordot a Rackhost DNS-ben kell létrehozni, mielőtt a cím forgalmát átirányítanád.
-3. Ha a GitHub visszaigazolta a domaint, a Rackhost DNS-ben állítsd a gyökérdomaint (`@`) erre a négy A rekordra: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. A `www` host legyen CNAME a `tbeleznai-atlas-dev.github.io` címre. Cseréld le az ezekkel ütköző régi webes rekordokat; az NS- és MX-rekordokat, valamint az e-mailhez használt rekordokat hagyd meg.
-4. Várd meg, amíg a GitHub Pages DNS-ellenőrzése sikeres, és a HTTPS elérhetővé válik. Ezután a tár **Settings → Secrets and variables → Actions → Variables** részén hozd létre a `PALOCINDEX_CUSTOM_DOMAIN_READY` változót `true` értékkel.
-5. Az Actions oldalon futtasd le a `Validate and publish PalócIndex` munkafolyamatot a `main` ágról. A kiadás csak akkor fut le, ha a domain-kapu is be van kapcsolva.
+1. Nyisd meg a kiadási PR-t, ellenőrizd a sikeres ellenőrzést, majd olvaszd össze a `main` ágba. Ezt a tulajdonos GitHub-fiókjából kell elvégezni.
+2. A tár **Settings → Pages** oldalán a **Build and deployment → Source** mezőnél válaszd a **GitHub Actions** lehetőséget, ha még nincs így beállítva.
+3. A `main` ágra kerülés automatikusan elindítja a GitHub Pages telepítést. Amíg az egyéni domain nincs készen, a webhely a `https://tbeleznai-atlas-dev.github.io/palocindex-web-elonezet/` címen, keresőkből kizárt előnézetként jelenik meg. Ezzel a tartalom a DNS módosítása előtt ellenőrizhető.
+
+## Saját domain bekötése
+
+1. A GitHub tár **Settings → Pages → Custom domain** mezőjébe írd be: `palocindex.hu`, majd mentsd el. A GitHub által kért domain-ellenőrző TXT rekordot a Rackhost DNS-ben kell létrehozni, mielőtt a cím forgalmát átirányítanád.
+2. Ha a GitHub visszaigazolta a domaint, a Rackhost DNS-ben állítsd a gyökérdomaint (`@`) erre a négy A rekordra: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. A `www` host legyen CNAME a `tbeleznai-atlas-dev.github.io` címre. Cseréld le az ezekkel ütköző régi webes rekordokat; az NS- és MX-rekordokat, valamint az e-mailhez használt rekordokat hagyd meg.
+3. Várd meg, amíg a GitHub Pages DNS-ellenőrzése sikeres, és a HTTPS elérhetővé válik. Ezután a tár **Settings → Secrets and variables → Actions → Variables** részén hozd létre a `PALOCINDEX_CUSTOM_DOMAIN_READY` változót `true` értékkel.
+4. Az Actions oldalon futtasd le a `Validate and publish PalócIndex` munkafolyamatot a `main` ágról. A kiadás a saját domain gyökérútvonalára és engedélyezett indexeléssel épül.
 
 A DNS célcímeket és a sorrendet a [GitHub Pages egyéni domain útmutatója](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) írja le. A Pages egyéni domainjét előbb a GitHubon kell beállítani, és csak utána szabad a DNS-t átirányítani.
 
@@ -19,3 +24,4 @@ Az ellenőrzött nyilvános statikus tartalom a `pages-source/` könyvtárban va
 ## Adat- és biztonsági határ
 
 Kizárólag statikus, nyilvános oldalfájlok kerülnek ki. Nincs adatbázis, szerverkód, regisztráció, hirdetésfeladás, fizetés vagy üzenetküldés. Az ütemezett hír-, időjárás- és forgalomfrissítők külön fejlesztési feladatok; ez a kiadási folyamat önmagában csak a jóváhagyott statikus jelölteket teszi közzé.
+
