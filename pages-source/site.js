@@ -927,6 +927,73 @@
       target.replaceChildren();sources.replaceChildren();placeholder.hidden=false;status.textContent="Nógrád adatai most nem érhetők el friss, ellenőrzött jelöltként";
     });
   }
+  function loadWeatherNowCard(){
+    const card=el("weather-now-card"),temperature=el("weather-now-temperature"),precipitation=el("weather-now-precipitation"),note=el("weather-now-note");
+    if(!card||!temperature||!precipitation||!note)return;
+    const now=Date.now(),stationNames=new Set([42318,42604,42708,43129,43227,43431,52523]);
+    const parseTime=value=>typeof value==="string"&&value.length<=64&&Number.isFinite(Date.parse(value))?new Date(value):null;
+    const fresh=(value,maxAge)=>value&&value.getTime()<=now+5*60000&&now-value.getTime()<=maxAge;
+    const values=[];let measuredAt=null,probability="Nincs friss adat",forecastChecked=null;
+    Promise.allSettled([
+      fetch("/weather-observations.json",{cache:"no-store"}).then(response=>{if(!response.ok)throw new Error();return response.json();}),
+      fetch("/weather-regional.json",{cache:"no-store"}).then(response=>{if(!response.ok)throw new Error();return response.json();}),
+    ]).then(([observationResult,forecastResult])=>{
+      if(observationResult.status==="fulfilled"){
+        const data=observationResult.value,checked=parseTime(data?.checked_at);
+        if(data?.schema==="palocindex.weather-observations.v1"&&data.status==="approved_for_public_release"&&data.published===false
+          &&data.scope==="Nógrád vármegyei állomásmérések; nem előrejelzés"
+          &&data.source_url==="https://odp.met.hu/climate/observations_hungary/hourly/now/"
+          &&data.metadata_url==="https://odp.met.hu/climate/observations_hungary/hourly/station_meta_auto.csv"
+          &&data.terms_url==="https://odp.met.hu/ODP_altalanos_felhasznalasi_feltetelek.pdf"
+          &&data.attribution==="Adatbázis: Meteorológiai Adattár, HungaroMet Nonprofit Zrt."
+          &&fresh(checked,24*3600000)&&Array.isArray(data.stations)&&data.stations.length===7
+          &&Array.isArray(data.withheld_station_numbers)&&data.withheld_station_numbers.length===0){
+          const seen=new Set();let validRows=true;
+          data.stations.forEach(station=>{
+            if(!stationNames.has(station?.station_number)||seen.has(station.station_number)||!Array.isArray(station.measurements)){validRows=false;return;}
+            seen.add(station.station_number);
+            const observedText=station.observed_at;
+            const observed=/^\d{12}$/.test(observedText||"")
+              ?parseTime(`${observedText.slice(0,4)}-${observedText.slice(4,6)}-${observedText.slice(6,8)}T${observedText.slice(8,10)}:${observedText.slice(10,12)}:00Z`):null;
+            if(!fresh(observed,2*3600000))return;
+            const item=station.measurements.find(value=>value?.code==="t"&&value.label==="Órás pillanatnyi hőmérséklet"&&value.unit==="°C");
+            if(!item||typeof item.raw_value!=="string"||item.raw_value.length>64||!/^\s*[+-]?(?:\d+(?:\.\d*)?|\.\d+)\s*$/.test(item.raw_value))return;
+            const value=Number(item.raw_value.trim());
+            if(Number.isFinite(value)&&value>=-60&&value<=60){values.push(value);measuredAt=measuredAt?new Date(Math.max(measuredAt.getTime(),observed.getTime())):observed;}
+          });
+          if(!validRows||seen.size!==stationNames.size)values.splice(0);
+        }
+      }
+      if(forecastResult.status==="fulfilled"){
+        const data=forecastResult.value,issued=parseTime(data?.issued_at),checked=parseTime(data?.checked_at);
+        if(data?.schema==="palocindex.weather.v1"&&data.status==="approved_for_public_release"&&data.published===false
+          &&data.scope==="Nógrád vármegye, nem településspecifikus"
+          &&typeof data.forecast_text==="string"&&data.forecast_text.length<=32000
+          &&typeof data.source_url==="string"
+          &&data.source_url.startsWith("https://odp.met.hu/weather/text_forecast/regional_forecast/flRs/txt/flRs")
+          &&data.source_url.endsWith(".txt.zip")&&data.terms_url==="https://odp.met.hu/ODP_altalanos_felhasznalasi_feltetelek.pdf"
+          &&data.attribution==="Adatbázis: Meteorológiai Adattár, HungaroMet Nonprofit Zrt."
+          &&fresh(issued,36*3600000)&&fresh(checked,24*3600000)){
+          const match=data.forecast_text.match(/(?:eső|zápor|csapadék|hó|havazás)[^()\n]{0,100}\((\d{1,3})\s*[-–]\s*(\d{1,3})\s*%\s*eséllyel\)/i);
+          if(match){const low=Number(match[1]),high=Number(match[2]);if(low<=high&&high<=100){probability=`${low}–${high}%`;forecastChecked=checked;}}
+        }
+      }
+      if(values.length){
+        values.sort((a,b)=>a-b);const middle=Math.floor(values.length/2);
+        const median=values.length%2?values[middle]:(values[middle-1]+values[middle])/2;
+        temperature.textContent=new Intl.NumberFormat("hu-HU",{maximumFractionDigits:1}).format(median)+" °C";
+      }else temperature.textContent="Nincs friss mérés";
+      precipitation.textContent=probability;
+      const format=value=>new Intl.DateTimeFormat("hu-HU",{dateStyle:"medium",timeStyle:"short",timeZone:"Europe/Budapest"}).format(value);
+      const detail=[];
+      if(values.length)detail.push(`Friss nógrádi állomásmérések mediánja (${values.length} állomás${measuredAt?`, mérve: ${format(measuredAt)}`:""})`);
+      else detail.push("Nincs két órán belüli, ellenőrzött állomáshőmérséklet");
+      if(forecastChecked)detail.push(`HungaroMet regionális előrejelzés ellenőrizve: ${format(forecastChecked)}`);
+      else detail.push("Friss regionális előrejelzésben nincs megadott csapadék-valószínűség");
+      note.textContent=detail.join(" · ");
+      card.hidden=!values.length&&!forecastChecked;
+    }).catch(()=>{card.hidden=true;});
+  }
   window.addEventListener("DOMContentLoaded",()=>{
     el("town-retry")?.addEventListener("click", async()=>{
       if(await loadTowns()) el("town-query")?.focus();
@@ -939,6 +1006,7 @@
     loadWeatherECMWF();
     loadRegionalWeather();
     loadWeatherObservations();
+    loadWeatherNowCard();
     loadCountyProfile();
   });
 })();
