@@ -39,7 +39,7 @@ jobs:
           --allow-indexing
 
   deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.PALOCINDEX_CUSTOM_DOMAIN_READY == 'true'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: validate
     runs-on: ubuntu-latest
     permissions:
@@ -58,13 +58,25 @@ jobs:
           python-version: "3.12"
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Select preview or custom-domain build
+        id: mode
+        env:
+          CUSTOM_DOMAIN_READY: ${{ vars.PALOCINDEX_CUSTOM_DOMAIN_READY }}
+        run: |
+          if [[ "$CUSTOM_DOMAIN_READY" == "true" ]]; then
+            echo "base_path=/" >> "$GITHUB_OUTPUT"
+            echo "indexing_flag=--allow-indexing" >> "$GITHUB_OUTPUT"
+          else
+            echo "base_path=/palocindex-web-elonezet/" >> "$GITHUB_OUTPUT"
+            echo "indexing_flag=" >> "$GITHUB_OUTPUT"
+          fi
       - name: Build the public static files
         run: >-
           python ops/publication/build_github_pages.py
           --source-dir pages-source
           --output-dir pages-artifact
-          --base-path /
-          --allow-indexing
+          --base-path "${{ steps.mode.outputs.base_path }}"
+          ${{ steps.mode.outputs.indexing_flag }}
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
@@ -72,3 +84,4 @@ jobs:
       - name: Deploy PalócIndex
         id: deployment
         uses: actions/deploy-pages@v4
+
