@@ -1,4 +1,4 @@
-name: Validate and publish PalócIndex preview
+name: Validate and publish PalócIndex
 
 on:
   pull_request:
@@ -24,20 +24,22 @@ jobs:
         uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-      - name: Test Pages packaging
+      - name: Test Pages packaging and domain gate
         run: >-
           python -m unittest
           ops.publication.test_build_github_pages
           ops.publication.test_sync_github_pages_source
-      - name: Validate the site artifact
+          ops.publication.test_pages_workflow
+      - name: Validate the root-domain artifact
         run: >-
           python ops/publication/build_github_pages.py
           --source-dir pages-source
           --output-dir tmp/pages-preflight
-          --base-path /palocindex-web-elonezet/
+          --base-path /
+          --allow-indexing
 
   deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.PALOCINDEX_CUSTOM_DOMAIN_READY == 'true'
     needs: validate
     runs-on: ubuntu-latest
     permissions:
@@ -61,11 +63,12 @@ jobs:
           python ops/publication/build_github_pages.py
           --source-dir pages-source
           --output-dir pages-artifact
-          --base-path /palocindex-web-elonezet/
+          --base-path /
+          --allow-indexing
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: pages-artifact
-      - name: Deploy Pages preview
+      - name: Deploy PalócIndex
         id: deployment
         uses: actions/deploy-pages@v4
